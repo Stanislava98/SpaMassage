@@ -1,0 +1,12 @@
+.StickyButton {
+    border-radius: 50%;
+    height: 84px;
+    width: 84px;
+    border: 1px solid #E2702F;
+    display: flex;
+    justifycontent: center;
+    alignitems: center;
+    position: fixed;
+    right: 40px;
+    bottom: 50px;
+}
