@@ -17,7 +17,9 @@ const Instagram = () => {
     <CenterHeaderDescription>
       <DashWithSubheadings>Подписывайтесь, чтоб не пропустить!</DashWithSubheadings>
       <Title>еженедельные призы в инстаграме</Title>
-      <Title color="orange">@sparelax</Title>
+      <Title><a href="https://www.instagram.com/atamanuikstanislava/"
+                               target="_blank"
+                               rel="noopener noreferrer" style={{color: '#E2702F', textDecoration: 'none'}}>@sparelax</a></Title>
     </CenterHeaderDescription>
     <PicturesBlock>
       <img src={'img/Insta/1.png'}/>

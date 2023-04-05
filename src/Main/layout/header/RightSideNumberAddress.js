@@ -7,7 +7,7 @@ const Root = styled('div')({
   display: 'flex',
   zIndex: '100',
   position: 'absolute',
-  top: '430%',
+  top: '400%',
 })
 
 const RightSideNumberAddress = () => {

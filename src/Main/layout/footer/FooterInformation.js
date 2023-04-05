@@ -10,7 +10,7 @@ import Visa from "../../../icons/footericon/Visa";
 import MasterCard from "../../../icons/footericon/MasterCard";
 import Address from "../../../components/Address";
 import PhoneNumber from "../../../components/PhoneNumber";
-import StickyPhoneIcon from "../../StickyPhoneIcon";
+import StickyPhoneIcon from "../../StickyButton";
 
 const Text = styled('div')({
   textTransform: 'uppercase',

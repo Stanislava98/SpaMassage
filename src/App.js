@@ -10,16 +10,14 @@ import BlockOfSpecialists from "./Main/Therapists/BlockOfSpecialists";
 import Feedback from "./Main/Feedback/Feedback";
 import Instagram from "./Main/Instagram";
 import Footer from "./Main/layout/footer/Footer";
-import StickyPhoneIcon from "./Main/StickyPhoneIcon";
+import StickyButton from "./Main/StickyButton";
 
 
 function App() {
   return (
     <>
-      <StickyPhoneIcon/>
-
+      <StickyButton/>
       <Header/>
-
       <WrapperContainer>
         <TextGallery />
         <AboutSpa/>
