@@ -1,7 +1,6 @@
 import { styled } from '@mui/material';
-import OutlinedButton from '../../components/OutlinedButton';
 import Title from '../../components/Title';
-
+import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
 
 const Description = styled('div')({
   color: 'white',
@@ -29,9 +28,9 @@ const InformationAboutCertificates = () => {
           </p>
         </Description>
         <div style={{ display: 'flex', flexDirection: 'row', gap: '34px', marginTop: '40px' }}>
-          <OutlinedButton>1000₴</OutlinedButton>
-          <OutlinedButton>1500₴</OutlinedButton>
-          <OutlinedButton>2000₴</OutlinedButton>
+          <ContainedAndOutlinedButton variant="outlined">1000₴</ContainedAndOutlinedButton>
+          <ContainedAndOutlinedButton variant="outlined">1500₴</ContainedAndOutlinedButton>
+          <ContainedAndOutlinedButton variant="outlined">2000₴</ContainedAndOutlinedButton>
         </div>
       </div>
     </>

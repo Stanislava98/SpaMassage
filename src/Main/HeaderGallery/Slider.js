@@ -23,7 +23,6 @@ const RightCountSlider = styled('div')({
   paddingBottom: '11px',
 });
 
-
 const WrapperCountColumnLeft = styled('div')({
   display: 'flex',
   flexDirection: 'column',
@@ -33,25 +32,21 @@ const WrapperCountColumnRight = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'end',
-})
+});
 
 const Slider = () => {
   return (
     <Root>
       <WrapperCountColumnLeft>
-          <LeftCountSlider>
-            03
-          </LeftCountSlider>
-          <IconArrowLeft/>
-        </WrapperCountColumnLeft>
-        <WrapperCountColumnRight>
-          <RightCountSlider>
-            05
-          </RightCountSlider>
-          <ArrowRightIcon/>
-        </WrapperCountColumnRight>
+        <LeftCountSlider>03</LeftCountSlider>
+        <IconArrowLeft />
+      </WrapperCountColumnLeft>
+      <WrapperCountColumnRight>
+        <RightCountSlider>05</RightCountSlider>
+        <ArrowRightIcon />
+      </WrapperCountColumnRight>
     </Root>
-  )
-}
+  );
+};
 
 export default Slider;

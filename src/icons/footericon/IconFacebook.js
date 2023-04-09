@@ -1,4 +1,4 @@
-const Facebook = () => {
+const IconFacebook = () => {
   return (
     <svg width="55" height="54" viewBox="0 0 55 54" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_331_567)">
@@ -14,4 +14,4 @@ const Facebook = () => {
   )
 }
 
-export default Facebook;
+export default IconFacebook;

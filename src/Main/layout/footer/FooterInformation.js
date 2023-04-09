@@ -1,16 +1,16 @@
 import DashWithSubheadings from "../../../components/DashWithSubheadings";
 import Title from "../../../components/Title";
 import {styled} from "@mui/material";
-import Telegram from "../../../icons/footericon/Telegram";
-import Facebook from "../../../icons/footericon/Facebook";
+import IconTelegram from "../../../icons/footericon/IconTelegram";
+import IconFacebook from "../../../icons/footericon/IconFacebook";
 import IconInstagram from "../../../icons/footericon/IconInstagram";
 import Divider from '@mui/material/Divider';
 import MenuBar from "../../../components/MenuBar";
-import Visa from "../../../icons/footericon/Visa";
-import MasterCard from "../../../icons/footericon/MasterCard";
+import IconVisa from "../../../icons/footericon/IconVisa";
+import IconMasterCard from "../../../icons/footericon/IconMasterCard";
 import Address from "../../../components/Address";
 import PhoneNumber from "../../../components/PhoneNumber";
-import StickyPhoneIcon from "../../StickyButton";
+
 
 const Text = styled('div')({
   textTransform: 'uppercase',
@@ -41,9 +41,9 @@ const FooterInformation = () => {
           <Text style={{display: 'flex', alignItems: 'center',}}>ежедневно с 09:00 до 21:00</Text>
         </div>
         <div style={{gap: '20px', display: 'flex'}}>
-          <Telegram/>
-          <Facebook/>
-          <IconInstagram/>
+          <IconTelegram/>
+          <IconFacebook/>
+          <IconInstagram></IconInstagram>
         </div>
       </BlockTextIcons>
       <Divider style={{minWidth: '100%', border: '1px solid #795348', marginTop: '20px'}}/>
@@ -57,8 +57,8 @@ const FooterInformation = () => {
           <div>отзывы</div>
         </MenuBar>
         <div style={{gap: '20px', display: 'flex', alignItems: 'center'}}>
-          <Visa/>
-          <MasterCard/>
+          <IconVisa/>
+          <IconMasterCard/>
         </div>
       </BlockTextIcons>
 

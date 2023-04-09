@@ -1,7 +1,7 @@
-import {styled} from '@mui/material';
-import ContainedButtonGallery from '../../components/ContainedButtonGallery';
+import { styled } from '@mui/material';
+import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
 import Slider from './Slider';
-import Gallery from "./Gallary";
+import Gallery from './Gallary';
 
 const HeaderTextGallery = styled('h1')({
   zIndex: '2',
@@ -13,6 +13,10 @@ const HeaderTextGallery = styled('h1')({
   lineHeight: '125%',
   textTransform: 'uppercase',
 });
+
+const onSubmit = (event) => {
+  console.log('event > ', event);
+};
 
 const DescriptionTextGallery = styled('div')({
   marginTop: '170px',
@@ -29,19 +33,24 @@ const DescriptionTextGallery = styled('div')({
 
 const TextGallery = () => {
   return (
-    <div style={{ display: 'flex'}} className='firstBlock'>
-      <div style={{paddingTop: '90px'}}>
+    <div style={{ display: 'flex' }} className="firstBlock">
+      <div style={{ paddingTop: '90px' }}>
         <HeaderTextGallery>Массаж головы антистресс</HeaderTextGallery>
         <DescriptionTextGallery>
           <p>
-            Главная задача такого массажа заключается <br/>в расслаблении, избавлении от негативных мыслей,
-            чему способствуют ритмические движения массажиста, свечи и приятная фоновая музыка
+            Главная задача такого массажа заключается <br />в расслаблении, избавлении от негативных
+            мыслей, чему способствуют ритмические движения массажиста, свечи и приятная фоновая
+            музыка
           </p>
-          <ContainedButtonGallery>записаться</ContainedButtonGallery>
-          <Slider/>
+          <div style={{ marginTop: '40px' }}>
+            <ContainedAndOutlinedButton variant="contained" onClick={onSubmit}>
+              записаться
+            </ContainedAndOutlinedButton>
+          </div>
+          <Slider />
         </DescriptionTextGallery>
       </div>
-      <Gallery/>
+      <Gallery />
     </div>
   );
 };

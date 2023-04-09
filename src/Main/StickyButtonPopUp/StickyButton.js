@@ -1,6 +1,6 @@
-import {useEffect, useState} from "react";
-import { Slide, styled } from "@mui/material";
-import CirclePhone from "../icons/CirclePhone";
+import { useEffect, useState } from 'react';
+import { Slide, styled } from '@mui/material';
+import CirclePhone from '../../icons/CirclePhone';
 
 const ButtonStyled = styled('button')({
   border: 0,
@@ -16,8 +16,11 @@ const ButtonStyled = styled('button')({
   position: 'fixed',
   right: '55px',
   bottom: '60px',
+  '&:hover': {
+    backgroundColor: '#dc5b13',
+  },
 
-  '&::before': {
+  '&::after': {
     content: "''",
     position: 'absolute',
     borderRadius: '50%',
@@ -32,15 +35,13 @@ const ButtonStyled = styled('button')({
       },
       '100%': {
         transform: ' rotate(360deg)',
-      }
-    }
-  }
+      },
+    },
+  },
 });
-
 
 const StickyButton = (props) => {
   const [isVisible, setIsVisible] = useState(false);
-
 
   useEffect(() => {
     function handleScroll() {
@@ -61,7 +62,7 @@ const StickyButton = (props) => {
   return (
     <Slide direction="up" in={isVisible}>
       <ButtonStyled onClick={props.onClick}>
-        <CirclePhone/>
+        <CirclePhone />
         {props.children}
       </ButtonStyled>
     </Slide>

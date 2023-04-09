@@ -1,40 +1,42 @@
 import Header from './Main/layout/header/Header';
 import WrapperContainer from './WrapperContainer';
-import Gallery from './Main/HeaderGallery/Gallary';
 import TextGallery from './Main/HeaderGallery/TextGallery';
 import AboutSpa from './Main/AboutSpa/AboutSpa';
 import ServicesSpa from './Main/ListOfSpa/ServicesSpa';
 import GiftCertificates from './Main/Certificates/GiftСertificates';
-import TitleCosmeticsBrands from "./Main/Brands/TitleCosmeticsBrands";
-import BlockOfSpecialists from "./Main/Therapists/BlockOfSpecialists";
-import Feedback from "./Main/Feedback/Feedback";
-import Instagram from "./Main/Instagram";
-import Footer from "./Main/layout/footer/Footer";
-import StickyButton from "./Main/StickyButton";
-
+import TitleCosmeticsBrands from './Main/Brands/TitleCosmeticsBrands';
+import BlockOfSpecialists from './Main/Therapists/BlockOfSpecialists';
+import Feedback from './Main/Feedback/Feedback';
+import Instagram from './Main/Instagram';
+import Footer from './Main/layout/footer/Footer';
+import StickyButton from './Main/StickyButtonPopUp/StickyButton';
+import DimmedScreen from './Main/StickyButtonPopUp/DimmedScreen';
+import PopUp from './Main/StickyButtonPopUp/PopUp';
 
 function App() {
   return (
     <>
-      <StickyButton/>
-      <Header/>
+      <PopUp />
+      <DimmedScreen />
+      <StickyButton />
+      <Header />
       <WrapperContainer>
         <TextGallery />
-        <AboutSpa/>
-        <ServicesSpa/>
+        <AboutSpa />
+        <ServicesSpa />
       </WrapperContainer>
 
-      <GiftCertificates/>
+      <GiftCertificates />
 
       <WrapperContainer>
-        <TitleCosmeticsBrands/>
+        <TitleCosmeticsBrands />
       </WrapperContainer>
-      <BlockOfSpecialists/>
+      <BlockOfSpecialists />
       <WrapperContainer>
-        <Feedback/>
-        <Instagram/>
+        <Feedback />
+        <Instagram />
       </WrapperContainer>
-      <Footer/>
+      <Footer />
     </>
   );
 }

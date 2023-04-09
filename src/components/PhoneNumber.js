@@ -1,4 +1,4 @@
-import PhoneCall from "../icons/footericon/PhoneCall";
+import IconPhoneCall from "../icons/footericon/IconPhoneCall";
 import {styled} from "@mui/material";
 
 
@@ -18,7 +18,7 @@ const Text = styled('div')({
 const PhoneNumber = () => {
   return (
     <IconWithText>
-      <PhoneCall/>
+      <IconPhoneCall/>
       <Text>+380934657812</Text>
     </IconWithText>
   )

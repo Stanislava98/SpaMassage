@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import OutlinedButton from '../../components/OutlinedButton';
+import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
 
 const Cart = styled('div')({
   display: 'flex',
@@ -53,7 +53,7 @@ const ServiceCard = ({ img, title, text, price }) => {
             <PriceCard>{price}</PriceCard>
           </TitleAndPrice>
           <Description>{text}</Description>
-          <OutlinedButton>записаться</OutlinedButton>
+          <ContainedAndOutlinedButton variant="outlined">записаться</ContainedAndOutlinedButton>
         </div>
       </div>
     </Cart>

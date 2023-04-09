@@ -5,7 +5,7 @@ import {styled} from "@mui/material";
 const Root = styled('div')({
   transform: 'rotate(90deg)',
   display: 'flex',
-  zIndex: '100',
+  zIndex: '98',
   position: 'absolute',
   top: '400%',
 })
