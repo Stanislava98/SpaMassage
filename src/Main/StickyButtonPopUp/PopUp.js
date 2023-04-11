@@ -1,4 +1,5 @@
 import { styled } from '@mui/material';
+import { useState } from 'react';
 import SmallTitleDescription from '../../components/SmallTitleDescription';
 import IconCross from '../../icons/IconCross';
 import InputNamePhone from './InputNamePhone';
@@ -49,23 +50,40 @@ const BlockTextInputs = styled('div')({
   paddingLeft: '24px',
 });
 
-
 const PopUp = () => {
+  const [succeed, setSucceed] = useState(false);
+
+  function handleSucceed() {
+    setSucceed(true);
+  }
+
   return (
     <Rectangle>
       <BgWrapper>
         <div style={{ display: 'flex', flexDirection: 'row-reverse' }}>
           <IconCross />
         </div>
-        <BlockTextInputs>
-          <BlockWithText>
-            <SmallTitleDescription>
-              Оставьте заявку
-              <div className="description">Мы свяжемся с вами в ближайшее время</div>
-            </SmallTitleDescription>
-          </BlockWithText>
-          <InputNamePhone />
-        </BlockTextInputs>
+
+        {succeed === false ? (
+          <BlockTextInputs>
+            <BlockWithText>
+              <SmallTitleDescription>
+                Оставьте заявку
+                <div className="description">Мы свяжемся с вами в ближайшее время</div>
+              </SmallTitleDescription>
+            </BlockWithText>
+            <InputNamePhone callback={handleSucceed} />
+          </BlockTextInputs>
+        ) : (
+          <BlockTextInputs>
+            <BlockWithText>
+              <SmallTitleDescription>
+                Спасибо, <br /> ваша заявка была принята!
+                <div className="description">Мы свяжемся с вами в ближайшее время</div>
+              </SmallTitleDescription>
+            </BlockWithText>
+          </BlockTextInputs>
+        )}
       </BgWrapper>
     </Rectangle>
   );

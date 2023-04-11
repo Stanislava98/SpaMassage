@@ -1,3 +1,4 @@
+import { Provider } from 'react-redux';
 import Header from './Main/layout/header/Header';
 import WrapperContainer from './WrapperContainer';
 import TextGallery from './Main/HeaderGallery/TextGallery';
@@ -12,10 +13,11 @@ import Footer from './Main/layout/footer/Footer';
 import StickyButton from './Main/StickyButtonPopUp/StickyButton';
 import DimmedScreen from './Main/StickyButtonPopUp/DimmedScreen';
 import PopUp from './Main/StickyButtonPopUp/PopUp';
+import store from './store/store';
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <PopUp />
       <DimmedScreen />
       <StickyButton />
@@ -37,7 +39,7 @@ function App() {
         <Instagram />
       </WrapperContainer>
       <Footer />
-    </>
+    </Provider>
   );
 }
 

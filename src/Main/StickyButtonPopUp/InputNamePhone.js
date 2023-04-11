@@ -1,9 +1,10 @@
 import { TextField, styled } from '@mui/material';
 import InputMask from 'react-input-mask';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
 import Validation from './Validation';
-
+import {openDialog} from "../../store/modalSlice";
 
 const InputField = styled(TextField)({
   background: '#232020',
@@ -32,12 +33,11 @@ const InputField = styled(TextField)({
   },
 });
 
-const InputNamePhone = () => {
+const InputNamePhone = ({ callback }) => {
+  const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [errors, setErrors] = useState({});
-  const [submitted, setSubmitted] = useState(false);
-
 
   const handleInputName = (event) => {
     setName(event.target.value);
@@ -49,12 +49,11 @@ const InputNamePhone = () => {
 
   const onSubmit = () => {
     const _errors = Validation({ name, phoneNumber });
-    setSubmitted(true);
     if (isEmpty(_errors) === false) {
       console.log(_errors);
       setErrors(_errors);
     } else {
-      console.log('good');
+      callback();
     }
   };
 
@@ -93,7 +92,6 @@ const InputNamePhone = () => {
           жду звонка
         </ContainedAndOutlinedButton>
       </div>
-      {submitted && <p>Ваша заявка принята</p>}
     </form>
   );
 };
