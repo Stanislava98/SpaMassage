@@ -11,16 +11,12 @@ import Feedback from './Main/Feedback/Feedback';
 import Instagram from './Main/Instagram';
 import Footer from './Main/layout/footer/Footer';
 import StickyButton from './Main/StickyButtonPopUp/StickyButton';
-import DimmedScreen from './Main/StickyButtonPopUp/DimmedScreen';
-import PopUp from './Main/StickyButtonPopUp/PopUp';
 import store from './store/store';
+import ModalWrapper from './components/ModalWrapper';
 
 function App() {
   return (
     <Provider store={store}>
-      <PopUp />
-      <DimmedScreen />
-      <StickyButton />
       <Header />
       <WrapperContainer>
         <TextGallery />
@@ -39,6 +35,8 @@ function App() {
         <Instagram />
       </WrapperContainer>
       <Footer />
+      <StickyButton />
+      <ModalWrapper />
     </Provider>
   );
 }

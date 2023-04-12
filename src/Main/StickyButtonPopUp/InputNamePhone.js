@@ -1,10 +1,8 @@
 import { TextField, styled } from '@mui/material';
 import InputMask from 'react-input-mask';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
 import Validation from './Validation';
-import {openDialog} from "../../store/modalSlice";
 
 const InputField = styled(TextField)({
   background: '#232020',
@@ -34,7 +32,6 @@ const InputField = styled(TextField)({
 });
 
 const InputNamePhone = ({ callback }) => {
-  const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [errors, setErrors] = useState({});
@@ -61,6 +58,13 @@ const InputNamePhone = ({ callback }) => {
     return Object.keys(obj).length === 0;
   }
 
+  const handleNameKeyPress = (event) => {
+    const { charCode } = event;
+    if (/\d/.test(String.fromCharCode(charCode))) {
+      event.preventDefault();
+    }
+  }
+
   return (
     <form
       style={{
@@ -72,7 +76,7 @@ const InputNamePhone = ({ callback }) => {
       }}
     >
       <div>
-        <InputField label="Введите ваше имя" onChange={handleInputName} />
+        <InputField onKeyPress={handleNameKeyPress} label="Введите ваше имя" onChange={handleInputName} />
         {errors.name && (
           <div style={{ display: 'flex', marginTop: '8px', color: 'red' }}>{errors.name}</div>
         )}

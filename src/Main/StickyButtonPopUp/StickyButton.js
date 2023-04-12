@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Slide, styled } from '@mui/material';
+import { useDispatch } from 'react-redux';
 import CirclePhone from '../../icons/CirclePhone';
+import { openDialog } from '../../store/modalSlice';
+import PopUp from './PopUp';
 
 const ButtonStyled = styled('button')({
   border: 0,
@@ -40,7 +43,8 @@ const ButtonStyled = styled('button')({
   },
 });
 
-const StickyButton = (props) => {
+const StickyButton = () => {
+  const dispatch = useDispatch();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -59,11 +63,14 @@ const StickyButton = (props) => {
     };
   }, []);
 
+  const handleClick = () => {
+    dispatch(openDialog(<PopUp />));
+  };
+
   return (
     <Slide direction="up" in={isVisible}>
-      <ButtonStyled onClick={props.onClick}>
+      <ButtonStyled onClick={handleClick}>
         <CirclePhone />
-        {props.children}
       </ButtonStyled>
     </Slide>
   );
