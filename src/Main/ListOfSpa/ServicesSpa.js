@@ -11,7 +11,7 @@ const ServicesSpa = () => {
         <DashWithSubheadings>Райское наслаждение</DashWithSubheadings>
         <Title>Услуги spa relax</Title>
       </CenterHeaderDescription>
-      <MassageList />
+      <MassageList/>
     </MarginWrapper>
   );
 };

@@ -4,8 +4,8 @@ import IconBonusPlus from '../../icons/IconBonus_Point';
 import IconMassage from '../../icons/IconMassage';
 import IconCream from '../../icons/IconCream';
 import IconCoffeeCup from '../../icons/IconCoffeeCup';
-import Title from "../../components/Title";
-import MarginWrapper from "../../components/MarginWrapper";
+import Title from '../../components/Title';
+import MarginWrapper from '../../components/MarginWrapper';
 
 const Description = styled('div')({
   color: 'white',
@@ -41,7 +41,7 @@ const AboutSpa = () => {
   return (
     <MarginWrapper>
       <Title>вкратце о салоне</Title>
-      <div style={{ display: 'flex' }}>
+      <div id='about' style={{ display: 'flex' }}>
         <Title color="orange">spa relax</Title>
         <Description>
           Погрузитесь в мир СПА от нашего салона — и ваш разум, тело и дух испытают фантастические

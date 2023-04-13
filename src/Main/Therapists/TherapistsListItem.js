@@ -13,7 +13,7 @@ const Description = styled('div')({
 
 const TherapistsListItem = ({img, title, text}) => {
   return (
-    <div>
+    <div id='specialists'>
       <img src={img}/>
       <div style={{marginTop: '20px'}}>
         <TitleOfNames>{title}</TitleOfNames>

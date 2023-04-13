@@ -11,7 +11,7 @@ const Subheading = styled('div')({
 
 const DashWithSubheadings = (props) => {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
+    <div id='spa' style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
       <HorizontalBar />
       <Subheading>{props.children}</Subheading>
     </div>

@@ -14,6 +14,7 @@ import StickyButton from './Main/StickyButtonPopUp/StickyButton';
 import store from './store/store';
 import ModalWrapper from './components/ModalWrapper';
 
+
 function App() {
   return (
     <Provider store={store}>
@@ -23,9 +24,7 @@ function App() {
         <AboutSpa />
         <ServicesSpa />
       </WrapperContainer>
-
       <GiftCertificates />
-
       <WrapperContainer>
         <TitleCosmeticsBrands />
       </WrapperContainer>

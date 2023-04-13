@@ -50,7 +50,7 @@ const ListOfComments = () => {
     >
       <Root>
         <Rectangle>
-          <div>
+          <div id='feedback'>
             <Information>
               <TitleInRectangle>« Отличное место для отдыха и расслабления »</TitleInRectangle>
               <Rating name="read-only" value={value} size="small" readOnly />

@@ -1,13 +1,15 @@
 import AppBar from '@mui/material/AppBar';
 import { styled } from '@mui/material';
+import { Link } from 'react-scroll';
 import SpaRelaxIcon from '../../logo/SpaRelaxIcon';
 import ChangeLanguages from './ChangeLanguages';
-import MenuBar from "../../../components/MenuBar";
-import RightSideNumberAddress from "./RightSideNumberAddress";
+import MenuBar from '../../../components/MenuBar';
+import RightSideNumberAddress from './RightSideNumberAddress';
 
 const StyledAppBar = styled(AppBar)({
-  backgroundColor: 'transparent',
+  backgroundColor: '#1F1D1D',
   boxShadow: 'none',
+  opacity: '95%',
   display: 'flex',
   flexDirection: 'row',
 });
@@ -30,18 +32,28 @@ const Side = styled('div')({
 
 const Header = () => {
   return (
-    <StyledAppBar position="relative">
+    <StyledAppBar position="sticky">
       <Side />
       <StyledContainer>
-        <div>
-            <SpaRelaxIcon />
-        </div>
+        <Link to="main" spy smooth offset={-250} duration={500}>
+          <SpaRelaxIcon />
+        </Link>
         <MenuBar>
-          <div>о нас</div>
-          <div>услуги</div>
-          <div>подарочные сертификаты</div>
-          <div>специалисты</div>
-          <div>отзывы</div>
+          <Link to="about" spy smooth offset={-250} duration={500}>
+            о нас
+          </Link>
+          <Link to="spa" spy smooth offset={-130} duration={500}>
+            услуги
+          </Link>
+          <Link to="certificates" spy smooth offset={-120} duration={500}>
+            подарочные сертификаты
+          </Link>
+          <Link to="specialists" spy smooth offset={-360} duration={500}>
+            специалисты
+          </Link>
+          <Link to="feedback" spy smooth offset={-350} duration={500}>
+            отзывы
+          </Link>
         </MenuBar>
       </StyledContainer>
       <Side>
@@ -49,7 +61,6 @@ const Header = () => {
         <RightSideNumberAddress />
       </Side>
     </StyledAppBar>
-
   );
 };
 

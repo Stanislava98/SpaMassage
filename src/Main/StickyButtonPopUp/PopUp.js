@@ -6,6 +6,7 @@ import IconCross from '../../icons/IconCross';
 import InputNamePhone from './InputNamePhone';
 import { closeDialog } from '../../store/modalSlice';
 
+
 const Rectangle = styled('div')({
   backgroundColor: '#1C1A1A',
   height: '430px',
@@ -73,7 +74,7 @@ const PopUp = () => {
 
 
   return (
-    <Rectangle>
+    <Rectangle >
       <BgWrapper>
         <div style={{ display: 'flex', flexDirection: 'row-reverse', cursor: 'pointer', width: '24px',height: '24px'}}>
           <CrossIconButton onClick={handleClose}>

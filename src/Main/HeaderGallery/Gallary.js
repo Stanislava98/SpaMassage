@@ -12,7 +12,7 @@ const Root = styled('div')({
 const Gallery = () => {
   return (
     <Root>
-      <div className="fill">
+      <div id='main' className="fill">
         <img src="img/1.png" alt="" />
       </div>
     </Root>

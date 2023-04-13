@@ -1,5 +1,5 @@
-import {styled} from '@mui/material';
-import {useState} from 'react';
+import { styled } from '@mui/material';
+import { useState } from 'react';
 
 const Root = styled('div')({
   display: 'flex',
@@ -26,20 +26,14 @@ const ChangeLanguages = () => {
   };
 
   return (
-      <Root>
-        <div
-          onClick={() => handleClick('ru')}
-          className={language === 'ru' ? 'active' : ''}
-        >
-          ru
-        </div>
-        <div
-          onClick={() => handleClick('en')}
-          className={language === 'en' ? 'active' : ''}
-        >
-          en
-        </div>
-      </Root>
+    <Root>
+      <div onClick={() => handleClick('ru')} className={language === 'ru' ? 'active' : ''}>
+        ru
+      </div>
+      <div onClick={() => handleClick('en')} className={language === 'en' ? 'active' : ''}>
+        en
+      </div>
+    </Root>
   );
 };
 

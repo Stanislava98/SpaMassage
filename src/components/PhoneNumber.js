@@ -1,27 +1,30 @@
-import IconPhoneCall from "../icons/footericon/IconPhoneCall";
-import {styled} from "@mui/material";
-
+import {styled} from '@mui/material';
+import IconPhoneCall from '../icons/footericon/IconPhoneCall';
 
 const IconWithText = styled('div')({
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
   gap: '14px',
-})
+});
 
 const Text = styled('div')({
   textTransform: 'uppercase',
   fontWeight: 'bold',
-  color: 'white'
+  color: 'white',
 });
+
 
 const PhoneNumber = () => {
   return (
     <IconWithText>
-      <IconPhoneCall/>
-      <Text>+380934657812</Text>
+      <a style={{textDecoration: 'none', display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '14px',}} href='tel:+380934657812' >
+        <IconPhoneCall />
+        <div style={{textDecoration: 'none'}} href='tel:+380934657812'><Text>+380934657812</Text></div>
+      </a>
+
     </IconWithText>
-  )
-}
+  );
+};
 
 export default PhoneNumber;

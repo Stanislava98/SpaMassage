@@ -10,7 +10,7 @@ const Description = styled('div')({
 
 const InformationAboutCertificates = () => {
   return (
-    <>
+    <div id='certificates'>
       <img
         style={{ position: 'absolute', marginLeft: '570px', paddingTop: '60px' }}
         src="img/certificates1.png"
@@ -33,7 +33,7 @@ const InformationAboutCertificates = () => {
           <ContainedAndOutlinedButton variant="outlined">2000₴</ContainedAndOutlinedButton>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

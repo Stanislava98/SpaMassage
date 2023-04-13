@@ -16,7 +16,7 @@ const Feedback = () => {
         </Title>
       </CenterHeaderDescription>
       <ListOfComments />
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
         <ContainedAndOutlinedButton variant="contained">Добавить отзыв</ContainedAndOutlinedButton>
       </div>
     </MarginWrapper>

@@ -1,21 +1,21 @@
-import DashWithSubheadings from "../../../components/DashWithSubheadings";
-import Title from "../../../components/Title";
-import {styled} from "@mui/material";
-import IconTelegram from "../../../icons/footericon/IconTelegram";
-import IconFacebook from "../../../icons/footericon/IconFacebook";
-import IconInstagram from "../../../icons/footericon/IconInstagram";
 import Divider from '@mui/material/Divider';
-import MenuBar from "../../../components/MenuBar";
-import IconVisa from "../../../icons/footericon/IconVisa";
-import IconMasterCard from "../../../icons/footericon/IconMasterCard";
-import Address from "../../../components/Address";
-import PhoneNumber from "../../../components/PhoneNumber";
-
+import {styled} from '@mui/material';
+import {Link} from 'react-scroll';
+import DashWithSubheadings from '../../../components/DashWithSubheadings';
+import Title from '../../../components/Title';
+import IconTelegram from '../../../icons/footericon/IconTelegram';
+import IconFacebook from '../../../icons/footericon/IconFacebook';
+import IconInstagram from '../../../icons/footericon/IconInstagram';
+import MenuBar from '../../../components/MenuBar';
+import IconVisa from '../../../icons/footericon/IconVisa';
+import IconMasterCard from '../../../icons/footericon/IconMasterCard';
+import Address from '../../../components/Address';
+import PhoneNumber from '../../../components/PhoneNumber';
 
 const Text = styled('div')({
   textTransform: 'uppercase',
   fontWeight: 'bold',
-  color: 'white'
+  color: 'white',
 });
 
 const BlockTextIcons = styled('div')({
@@ -23,7 +23,7 @@ const BlockTextIcons = styled('div')({
   justifyContent: 'space-between',
   marginTop: '20px',
   alignItems: 'center',
-})
+});
 
 const FooterInformation = () => {
   return (
@@ -35,26 +35,53 @@ const FooterInformation = () => {
 
       <BlockTextIcons>
         <div style={{display: 'flex', gap: '30px'}}>
-          <Address />
-          <PhoneNumber />
+          <Address/>
+          <PhoneNumber/>
 
-          <Text style={{display: 'flex', alignItems: 'center',}}>ежедневно с 09:00 до 21:00</Text>
+          <Text style={{display: 'flex', alignItems: 'center'}}>ежедневно с 09:00 до 21:00</Text>
         </div>
+
         <div style={{gap: '20px', display: 'flex'}}>
-          <IconTelegram/>
-          <IconFacebook/>
-          <IconInstagram></IconInstagram>
+          <a
+            style={{textDecoration: 'none'}}
+            href="https://www.instagram.com/atamanuikstanislava/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <IconInstagram/>
+          </a>
+          <a
+            style={{textDecoration: 'none'}}
+            href="https://www.facebook.com/stanislava.sheptitskaya.3/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <IconFacebook/>
+          </a>
+          <a href="https://t.me/Slava98890" target="_blank" rel="noreferrer">
+            <IconTelegram/>
+          </a>
         </div>
       </BlockTextIcons>
       <Divider style={{minWidth: '100%', border: '1px solid #795348', marginTop: '20px'}}/>
 
       <BlockTextIcons>
         <MenuBar>
-          <div>о нас</div>
-          <div>услуги</div>
-          <div>подарочные сертификаты</div>
-          <div>специалисты</div>
-          <div>отзывы</div>
+          <Link to="about" spy smooth offset={-250} duration={500}>
+            о нас
+          </Link>
+          <Link to="spa" spy smooth offset={-100} duration={500}>
+            услуги
+          </Link>
+          <Link to="certificates" spy smooth offset={-120} duration={500}>
+            подарочные сертификаты
+          </Link>
+          <Link to="specialists" spy smooth offset={-360} duration={500}>
+            специалисты
+          </Link>
+          <Link to="certificates" spy smooth offset={3120} duration={500}>
+            отзывы
+          </Link>
         </MenuBar>
         <div style={{gap: '20px', display: 'flex', alignItems: 'center'}}>
           <IconVisa/>
@@ -62,16 +89,19 @@ const FooterInformation = () => {
         </div>
       </BlockTextIcons>
 
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        color: '#795348',
-        marginTop: '20px',
-        paddingBottom: '30px'}
-      }>2023(С) разработано Stanislava Atamanuik</div>
-
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          color: '#795348',
+          marginTop: '20px',
+          paddingBottom: '30px',
+        }}
+      >
+        2023(С) разработано Stanislava Atamanuik
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default FooterInformation;
