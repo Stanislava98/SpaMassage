@@ -1,5 +1,6 @@
 import { styled } from '@mui/material';
 import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
+import PopUpMassage from './PopUpMassage';
 
 const Cart = styled('div')({
   display: 'flex',
@@ -7,7 +8,7 @@ const Cart = styled('div')({
   overflow: 'hidden',
 });
 
-const TitleOfCard = styled('div')({
+const TitleOfCart = styled('div')({
   color: 'white',
   textTransform: 'uppercase',
   fontWeight: 'bold',
@@ -22,7 +23,7 @@ const Description = styled('div')({
   '-webkit-box-orient': 'vertical',
 });
 
-const PriceCard = styled('div')({
+const PriceCart = styled('div')({
   color: '#E2702F',
   fontWeight: 'bold',
   marginLeft: '0',
@@ -35,7 +36,7 @@ const TitleAndPrice = styled('div')({
   justifyContent: 'space-between',
 });
 
-const ServiceCard = ({ img, title, text, price }) => {
+const MassageCart = ({ img, title, text, price }) => {
   return (
     <Cart>
       <div>
@@ -49,15 +50,16 @@ const ServiceCard = ({ img, title, text, price }) => {
           }}
         >
           <TitleAndPrice>
-            <TitleOfCard>{title}</TitleOfCard>
-            <PriceCard>{price}</PriceCard>
+            <TitleOfCart>{title}</TitleOfCart>
+            <PriceCart>{price}</PriceCart>
           </TitleAndPrice>
           <Description>{text}</Description>
           <ContainedAndOutlinedButton variant="outlined">записаться</ContainedAndOutlinedButton>
+          <PopUpMassage />
         </div>
       </div>
     </Cart>
   );
 };
 
-export default ServiceCard;
+export default MassageCart;

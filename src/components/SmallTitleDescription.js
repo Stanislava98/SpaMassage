@@ -1,4 +1,4 @@
-import {styled} from "@mui/material";
+import { styled } from '@mui/material';
 
 const TitleAndDescription = styled('div')({
   color: 'white',
@@ -12,14 +12,11 @@ const TitleAndDescription = styled('div')({
     textTransform: 'none',
     marginTop: '5px',
     fontFamily: 'Raleway, serif',
-  }
-})
-
+  },
+});
 
 const SmallTitleDescription = (props) => {
-  return (
-      <TitleAndDescription>{props.children}</TitleAndDescription>
-  )
-}
+  return <TitleAndDescription>{props.children}</TitleAndDescription>;
+};
 
 export default SmallTitleDescription;

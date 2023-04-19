@@ -1,8 +1,8 @@
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import ServiceCard from './ServiceCard';
+import MassageCart from './MassageCart';
 
-const MassageList = () => {
+const MassageListInformation = () => {
   const itemData = [
     {
       img: 'img/ListOfMassage/image1.png',
@@ -64,11 +64,11 @@ const MassageList = () => {
     <ImageList cols={3} gap={34} style={{marginTop: '30px'}}>
       {itemData.map((item, index) => (
         <ImageListItem key={index}>
-          <ServiceCard title={item.title} text={item.text} price={item.price} img={item.img} />
+          <MassageCart title={item.title} text={item.text} price={item.price} img={item.img} />
         </ImageListItem>
       ))}
     </ImageList>
   );
 };
 
-export default MassageList;
+export default MassageListInformation;

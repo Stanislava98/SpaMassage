@@ -6,7 +6,6 @@ import FooterInformation from "./FooterInformation";
 const Footer = () => {
   return (
     <Gradient>
-x
       <footer className="footer" style={{paddingTop: '170px'}}>
         <WrapperContainer>
           <FooterInformation/>

@@ -3,7 +3,7 @@ import Header from './Main/layout/header/Header';
 import WrapperContainer from './WrapperContainer';
 import TextGallery from './Main/HeaderGallery/TextGallery';
 import AboutSpa from './Main/AboutSpa/AboutSpa';
-import ServicesSpa from './Main/ListOfSpa/ServicesSpa';
+import MainMassageBlock from './Main/ListOfSpa/MainMassageBlock';
 import GiftCertificates from './Main/Certificates/GiftСertificates';
 import TitleCosmeticsBrands from './Main/Brands/TitleCosmeticsBrands';
 import BlockOfSpecialists from './Main/Therapists/BlockOfSpecialists';
@@ -22,7 +22,7 @@ function App() {
       <WrapperContainer>
         <TextGallery />
         <AboutSpa />
-        <ServicesSpa />
+        <MainMassageBlock />
       </WrapperContainer>
       <GiftCertificates />
       <WrapperContainer>

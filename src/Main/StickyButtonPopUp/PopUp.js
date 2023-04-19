@@ -1,11 +1,9 @@
-import { IconButton, styled } from '@mui/material';
+import { styled } from '@mui/material';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import SmallTitleDescription from '../../components/SmallTitleDescription';
 import IconCross from '../../icons/IconCross';
 import InputNamePhone from './InputNamePhone';
-import { closeDialog } from '../../store/modalSlice';
-
+import CrossButton from '../../components/CrossButton';
 
 const Rectangle = styled('div')({
   backgroundColor: '#1C1A1A',
@@ -53,35 +51,19 @@ const BlockTextInputs = styled('div')({
   paddingLeft: '24px',
 });
 
-const CrossIconButton = styled(IconButton)({
-  backgroundColor: 'none',
-  '&:hover': {
-    backgroundColor: 'transparent',
-  }
-})
-
 const PopUp = () => {
-  const dispatch = useDispatch();
   const [succeed, setSucceed] = useState(false);
 
   function handleSucceed() {
     setSucceed(true);
   }
 
-  const handleClose = () => {
-    dispatch(closeDialog());
-  };
-
-
   return (
-    <Rectangle >
+    <Rectangle>
       <BgWrapper>
-        <div style={{ display: 'flex', flexDirection: 'row-reverse', cursor: 'pointer', width: '24px',height: '24px'}}>
-          <CrossIconButton onClick={handleClose}>
-            <IconCross />
-          </CrossIconButton>
-        </div>
-
+        <CrossButton>
+          <IconCross />
+        </CrossButton>
         {succeed === false ? (
           <BlockTextInputs>
             <BlockWithText>
