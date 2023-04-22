@@ -10,6 +10,7 @@ const InfoCheck = styled(Button)({
   alignItems: 'center',
   textTransform: 'none',
   fontSize: '16px',
+  borderRadius: 0,
   fontFamily: 'Raleway',
   fontFeatureSettings: '"lnum"',
   ':hover': {

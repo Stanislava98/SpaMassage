@@ -1,6 +1,8 @@
 import { styled } from '@mui/material';
+import { useDispatch } from 'react-redux';
 import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
-import PopUpMassage from './PopUpMassage';
+import { openDialog } from '../../store/modalSlice';
+import PopUpMassage from "./PopUpMassage";
 
 const Cart = styled('div')({
   display: 'flex',
@@ -36,11 +38,17 @@ const TitleAndPrice = styled('div')({
   justifyContent: 'space-between',
 });
 
-const MassageCart = ({ img, title, text, price }) => {
+const MassageCart = ({ massage }) => {
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(openDialog(<PopUpMassage details={massage} />));
+  };
+
   return (
     <Cart>
       <div>
-        <img src={img} style={{ maxWidth: '100%' }} />
+        <img src={massage.img} style={{ maxWidth: '100%' }} />
         <div
           style={{
             height: '168px',
@@ -50,12 +58,11 @@ const MassageCart = ({ img, title, text, price }) => {
           }}
         >
           <TitleAndPrice>
-            <TitleOfCart>{title}</TitleOfCart>
-            <PriceCart>{price}</PriceCart>
+            <TitleOfCart>{massage.title}</TitleOfCart>
+            <PriceCart>{massage.price}</PriceCart>
           </TitleAndPrice>
-          <Description>{text}</Description>
-          <ContainedAndOutlinedButton variant="outlined">записаться</ContainedAndOutlinedButton>
-          <PopUpMassage />
+          <Description>{massage.text}</Description>
+          <ContainedAndOutlinedButton onClick={handleClick} variant="outlined">записаться</ContainedAndOutlinedButton>
         </div>
       </div>
     </Cart>

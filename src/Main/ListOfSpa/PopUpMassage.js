@@ -1,17 +1,17 @@
 import { styled } from '@mui/material';
 import CrossButton from '../../components/CrossButton';
 import IconCross from '../../icons/IconCross';
-import InputCheckUp from './InputCheckUp';
-import ChooseTime from './ ChooseTime';
-import ChooseType from './ChooseType';
+import SelectCheckOils from './SelectCheckOils';
+import ChooseTime from './ChooseTime';
+import CustomizedAccordions from './CustomizedAccordions';
 
 const Rectangle = styled('div')({
   backgroundColor: '#1C1A1A',
   height: '680px',
-  width: '940px',
+  width: '1090px',
   zIndex: '104',
   position: 'fixed',
-  top: '56%',
+  top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
   overflow: 'hidden',
@@ -19,18 +19,23 @@ const Rectangle = styled('div')({
 
 const BgWrapper = styled('div')({
   height: '632px',
-  width: '892px',
+  width: '1042px',
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
 });
 
-const TitleOfCard = styled('div')({
+const TitleOfCart = styled('div')({
   color: 'white',
   textTransform: 'uppercase',
   fontWeight: 'bold',
   fontFamily: 'Lovelace text',
+});
+
+const DetailsInformation = styled('div')({
+  fontFamily: 'Raleway',
+  color: 'white',
 });
 
 const PriceCart = styled('div')({
@@ -39,16 +44,18 @@ const PriceCart = styled('div')({
   marginLeft: '0',
 });
 
-const PopUpMassage = () => {
+const PopUpMassage = ({ details }) => {
+  console.log('detalis => ', details);
+
   return (
     <Rectangle>
       <BgWrapper>
         <div style={{ display: 'flex' }}>
-          <div style={{ maxWidth: '100%' }}>
-            <img src="/img/imgMassagePopUp/Аромамассаж.png" />
+          <div>
+            <img src={details.img} />
           </div>
 
-          <div style={{ padding: '0 0 0 24px', width: '100%' }}>
+          <div style={{ padding: '0 0 0 24px', width: '50%' }}>
             <div
               style={{
                 display: 'flex',
@@ -60,32 +67,29 @@ const PopUpMassage = () => {
               <CrossButton>
                 <IconCross />
               </CrossButton>
-              <TitleOfCard>Масляный аромамассаж</TitleOfCard>
+              <TitleOfCart>{details.title}</TitleOfCart>
             </div>
 
-            <div style={{ marginTop: '24px' }}>
-              <PriceCart>400₴</PriceCart>
-              <div style={{ marginTop: '24px' }}>
-                <div style={{ color: 'white' }}>Длительность сеанса:</div>
+            <div style={{ marginTop: '20px' }}>
+              <PriceCart>{details.price}</PriceCart>
+              <div style={{ marginTop: '20px' }}>
+                <DetailsInformation>{details.time}</DetailsInformation>
                 <ChooseTime />
               </div>
 
-              <div style={{ marginTop: '24px' }}>
-                <div style={{ color: 'white' }}>Тип массажа:</div>
-                <div
-                  style={{ display: 'flex', flexDirection: 'row', gap: '14px', marginTop: '14px' }}
-                >
-                  <ChooseType />
+              <div style={{ marginTop: '20px' }}>
+                <DetailsInformation>{details.oils}</DetailsInformation>
+                <div style={{ marginTop: '14px' }}>
+                  <SelectCheckOils />
                 </div>
               </div>
-
-              <div style={{ marginTop: '24px' }}>
-                <div style={{ color: 'white' }}>Масла для аромамассажа:</div>
-                <div
-                  style={{ display: 'flex', flexDirection: 'row', gap: '14px', marginTop: '14px' }}
-                >
-                  <InputCheckUp />
-                </div>
+              <div style={{ marginTop: '8px' }}>
+                <CustomizedAccordions
+                  firstQuestion={details.firstQuestion}
+                  firstAnswer={details.firstAnswer}
+                  secondQuestion={details.secondQuestion}
+                  secondAnswer={details.secondAnswer}
+                />
               </div>
             </div>
           </div>

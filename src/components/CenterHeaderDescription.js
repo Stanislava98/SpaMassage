@@ -1,4 +1,4 @@
-import {styled} from "@mui/material";
+import { styled } from '@mui/material';
 
 const HeaderDescription = styled('div')({
   display: 'flex',
@@ -8,9 +8,7 @@ const HeaderDescription = styled('div')({
 });
 
 const CenterHeaderDescription = (props) => {
-  return (
-    <HeaderDescription>{props.children}</HeaderDescription>
-  )
-}
+  return <HeaderDescription>{props.children}</HeaderDescription>;
+};
 
 export default CenterHeaderDescription;
