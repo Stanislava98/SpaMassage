@@ -4,10 +4,10 @@ import IconCross from '../../icons/IconCross';
 import SelectCheckOils from './SelectCheckOils';
 import ChooseTime from './ChooseTime';
 import CustomizedAccordions from './CustomizedAccordions';
+import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
 
 const Rectangle = styled('div')({
   backgroundColor: '#1C1A1A',
-  height: '680px',
   width: '1090px',
   zIndex: '104',
   position: 'fixed',
@@ -15,15 +15,7 @@ const Rectangle = styled('div')({
   left: '50%',
   transform: 'translate(-50%, -50%)',
   overflow: 'hidden',
-});
-
-const BgWrapper = styled('div')({
-  height: '632px',
-  width: '1042px',
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
+  padding: '24px',
 });
 
 const TitleOfCart = styled('div')({
@@ -49,52 +41,62 @@ const PopUpMassage = ({ details }) => {
 
   return (
     <Rectangle>
-      <BgWrapper>
-        <div style={{ display: 'flex' }}>
-          <div>
-            <img src={details.img} />
+      <div style={{ display: 'flex', position: 'relative', overflow: 'hidden', height: '700px' }}>
+        <div style={{ position: 'relative', width: '50%' }}>
+          <img src={details.img} style={{ position: 'absolute', width: '100%' }} />
+        </div>
+
+        <div style={{ padding: '0 0 0 24px', width: '50%' }}>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row-reverse',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}
+          >
+            <CrossButton>
+              <IconCross />
+            </CrossButton>
+            <TitleOfCart>{details.title}</TitleOfCart>
           </div>
 
-          <div style={{ padding: '0 0 0 24px', width: '50%' }}>
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'row-reverse',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-              }}
-            >
-              <CrossButton>
-                <IconCross />
-              </CrossButton>
-              <TitleOfCart>{details.title}</TitleOfCart>
+          <div style={{ marginTop: '20px' }}>
+            <PriceCart>{details.price}</PriceCart>
+            <div style={{ marginTop: '20px' }}>
+              <DetailsInformation>{details.time}</DetailsInformation>
+              <ChooseTime />
             </div>
 
             <div style={{ marginTop: '20px' }}>
-              <PriceCart>{details.price}</PriceCart>
-              <div style={{ marginTop: '20px' }}>
-                <DetailsInformation>{details.time}</DetailsInformation>
-                <ChooseTime />
+              <DetailsInformation>{details.oils}</DetailsInformation>
+              <div style={{ marginTop: '14px' }}>
+                <SelectCheckOils />
               </div>
-
-              <div style={{ marginTop: '20px' }}>
-                <DetailsInformation>{details.oils}</DetailsInformation>
-                <div style={{ marginTop: '14px' }}>
-                  <SelectCheckOils />
-                </div>
-              </div>
-              <div style={{ marginTop: '8px' }}>
-                <CustomizedAccordions
-                  firstQuestion={details.firstQuestion}
-                  firstAnswer={details.firstAnswer}
-                  secondQuestion={details.secondQuestion}
-                  secondAnswer={details.secondAnswer}
-                />
+            </div>
+            <div
+              style={{
+                marginTop: '8px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+              }}
+            >
+              <CustomizedAccordions
+                firstQuestion={details.firstQuestion}
+                firstAnswer={details.firstAnswer}
+                secondQuestion={details.secondQuestion}
+                secondAnswer={details.secondAnswer}
+              />
+              <div style={{bottom: '0', position: 'absolute'}}>
+                <ContainedAndOutlinedButton variant="contained">
+                  заказать услугу
+                </ContainedAndOutlinedButton>
               </div>
             </div>
           </div>
         </div>
-      </BgWrapper>
+      </div>
     </Rectangle>
   );
 };

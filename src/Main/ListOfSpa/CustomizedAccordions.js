@@ -1,11 +1,10 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import {Typography} from "@mui/material";
-import ContainedAndOutlinedButton from "../../components/ContainedAndOutlinedButton";
+import { Typography } from '@mui/material';
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -21,16 +20,20 @@ const DetailsInformation = styled(Typography)({
 const Question = styled(Typography)({
   fontFamily: 'Raleway',
   color: 'white',
-  fontWeight: 'bold'
-})
+  fontWeight: 'bold',
+});
 
 const AccordionDetails = styled(MuiAccordionDetails)({
   borderTop: '1px solid #dc5b13',
   backgroundColor: 'transparent',
 });
 
-export default function CustomizedAccordions({ firstQuestion, firstAnswer,secondQuestion, secondAnswer}) {
-
+export default function CustomizedAccordions({
+  firstQuestion,
+  firstAnswer,
+  secondQuestion,
+  secondAnswer,
+}) {
   const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -39,10 +42,10 @@ export default function CustomizedAccordions({ firstQuestion, firstAnswer,second
 
   const AccordionSummary = styled((props) => (
     <MuiAccordionSummary
-      expandIcon={<ArrowForwardIosSharpIcon sx={{fontSize: '0.9rem', color: 'white'}}/>}
+      expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem', color: 'white' }} />}
       {...props}
     />
-  ))(({theme}) => ({
+  ))(({ theme }) => ({
     backgroundColor: 'transparent',
     padding: '0',
 
@@ -56,42 +59,29 @@ export default function CustomizedAccordions({ firstQuestion, firstAnswer,second
     },
     '& .MuiCollapse-root MuiCollapse-vertical': {
       backgroundColor: 'red',
-      height: '4px'
-    }
+      height: '4px',
+    },
   }));
 
   return (
-    <div>
-      <div style={{ bottom: 0, position: 'fixed'}}>
-        <ContainedAndOutlinedButton variant='contained'>заказать услугу</ContainedAndOutlinedButton>
-      </div>
+    <>
+      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+          <Question>{firstQuestion}</Question>
+        </AccordionSummary>
+        <AccordionDetails>
+          <DetailsInformation>{firstAnswer}</DetailsInformation>
+        </AccordionDetails>
+      </Accordion>
 
-
-      <div>
-        <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-          <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-            <Question>{firstQuestion}</Question>
-          </AccordionSummary>
-          <AccordionDetails>
-            <DetailsInformation>
-              {firstAnswer}
-            </DetailsInformation>
-          </AccordionDetails>
-        </Accordion>
-
-        <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-          <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-            <Question>{secondQuestion}</Question>
-          </AccordionSummary>
-          <AccordionDetails>
-            <DetailsInformation>
-              {secondAnswer}
-            </DetailsInformation>
-          </AccordionDetails>
-        </Accordion>
-
-      </div>
-
-    </div>
+      <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
+          <Question>{secondQuestion}</Question>
+        </AccordionSummary>
+        <AccordionDetails>
+          <DetailsInformation>{secondAnswer}</DetailsInformation>
+        </AccordionDetails>
+      </Accordion>
+    </>
   );
 }
