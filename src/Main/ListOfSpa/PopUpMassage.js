@@ -5,18 +5,7 @@ import SelectCheckOils from './SelectCheckOils';
 import ChooseTime from './ChooseTime';
 import CustomizedAccordions from './CustomizedAccordions';
 import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
-
-const Rectangle = styled('div')({
-  backgroundColor: '#1C1A1A',
-  width: '1090px',
-  zIndex: '104',
-  position: 'fixed',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  overflow: 'hidden',
-  padding: '24px',
-});
+import PopUpRectangle from '../../components/PopUpRectangle';
 
 const TitleOfCart = styled('div')({
   color: 'white',
@@ -37,10 +26,9 @@ const PriceCart = styled('div')({
 });
 
 const PopUpMassage = ({ details }) => {
-  console.log('detalis => ', details);
 
   return (
-    <Rectangle>
+    <PopUpRectangle>
       <div style={{ display: 'flex', position: 'relative', overflow: 'hidden', height: '700px' }}>
         <div style={{ position: 'relative', width: '50%' }}>
           <img src={details.img} style={{ position: 'absolute', width: '100%' }} />
@@ -97,7 +85,7 @@ const PopUpMassage = ({ details }) => {
           </div>
         </div>
       </div>
-    </Rectangle>
+    </PopUpRectangle>
   );
 };
 
