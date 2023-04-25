@@ -11,10 +11,14 @@ import {styled} from '@mui/material';
 dayjs('2019-01-25').format('[YYYYescape] YYYY-MM-DDTHH:mm:ssZ[Z]')
 
 const StyledDateCalendar = styled(DateCalendar)({
+  '&.MuiDateCalendar-root': {
+    width: '400px'
+  },
   '.MuiPickersCalendarHeader-root': {
     backgroundColor: '#E2702F',
     paddingTop: '12px',
     paddingBottom: '12px',
+    marginTop: '0',
     marginBottom: '0',
     '.MuiPickersArrowSwitcher-spacer': {
       width: '14px'
@@ -80,7 +84,7 @@ const DateCalendarValue = () => {
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs} locale="ru">
-      <DemoContainer components={['DateCalendar']}>
+      <DemoContainer sx={{paddingTop: '0'}} components={['DateCalendar']}>
         <StyledDateCalendar value={value} onChange={(newValue) => setValue(newValue)}/>
       </DemoContainer>
     </LocalizationProvider>

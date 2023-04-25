@@ -1,8 +1,9 @@
 import { styled } from '@mui/material';
 import PopUpRectangle from '../../components/PopUpRectangle';
-import CrossButton from "../../components/CrossButton";
-import IconCross from "../../icons/IconCross";
-import DateCalendarValue from "./DateCalendarValue";
+import CrossButton from '../../components/CrossButton';
+import IconCross from '../../icons/IconCross';
+import DateCalendarValue from './DateCalendarValue';
+import RadioButtonCheckTime from './RadioButtonCheckTime';
 
 const TitleOfCart = styled('div')({
   color: 'white',
@@ -36,7 +37,7 @@ const PopUpBookMassage = () => {
         }}
       >
         <div style={{ display: 'flex', width: '100%' }}>
-          <div style={{display: 'flex', width: '70%'}}>
+          <div style={{ display: 'flex', width: '70%' }}>
             <div style={{ width: '120px', height: '120px' }}>
               <img
                 style={{ width: '100%', objectFit: 'cover', height: '100%' }}
@@ -45,18 +46,20 @@ const PopUpBookMassage = () => {
             </div>
             <div style={{ marginLeft: '20px' }}>
               <TitleOfCart>Масляный аромамассаж</TitleOfCart>
-              <div style={{ display: 'flex', gap: '15px', flexDirection: 'column', marginTop: '15px' }}>
+              <div
+                style={{ display: 'flex', gap: '15px', flexDirection: 'column', marginTop: '15px' }}
+              >
                 <DetailsInformation>Длинетельность: 60 мин</DetailsInformation>
                 <DetailsInformation>Масло: апельсиновое, кокосовое</DetailsInformation>
               </div>
             </div>
           </div>
 
-          <div style={{ width: '30%', display: 'flex', justifyContent: 'space-between'}}>
-            <div style={{display: 'flex', alignItems: 'center'}}>
+          <div style={{ width: '30%', display: 'flex', justifyContent: 'space-between' }}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
               <PriceCart>400₴</PriceCart>
             </div>
-            <div style={{display: 'flex', alignItems: 'center'}}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
               <CrossButton>
                 <IconCross />
               </CrossButton>
@@ -65,15 +68,42 @@ const PopUpBookMassage = () => {
         </div>
       </div>
 
-      <div style={{display: 'flex', alignItems: 'center', marginTop: '34px', flexDirection: 'column', gap: '14px'}} >
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          marginTop: '34px',
+          flexDirection: 'column',
+          gap: '14px',
+        }}
+      >
         <TitleOfCart>Записывайтесь в Spa центр и получите максимальное расслабление</TitleOfCart>
-        <div style={{display: 'flex', textAlign: 'center', lineHeight: '140%',}}>
-          <DetailsInformation>Вы можете записаться на конкретную дату и время или
-            оставить свой телефон <br/>и мы свяжемся с Вами в течение 20 минут </DetailsInformation>
+        <div style={{ display: 'flex', textAlign: 'center', lineHeight: '140%' }}>
+          <DetailsInformation>
+            Вы можете записаться на конкретную дату и время или оставить свой телефон <br />и мы
+            свяжемся с Вами в течение 20 минут{' '}
+          </DetailsInformation>
         </div>
       </div>
-      <div style={{display: 'flex', marginTop: '14px'}}>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          marginTop: '24px',
+          justifyContent: 'center',
+        }}
+      >
         <DateCalendarValue />
+        <div
+          style={{
+            backgroundColor: '#161515',
+            width: '315px',
+            paddingLeft: '44px',
+            paddingTop: '18px',
+          }}
+        >
+          <RadioButtonCheckTime />
+        </div>
       </div>
     </PopUpRectangle>
   );
