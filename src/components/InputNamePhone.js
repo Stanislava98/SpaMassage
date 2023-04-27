@@ -1,8 +1,8 @@
-import { TextField, styled } from '@mui/material';
+import {TextField, styled} from '@mui/material';
 import InputMask from 'react-input-mask';
-import { useState } from 'react';
-import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
-import Validation from './Validation';
+import {useState} from 'react';
+import ContainedAndOutlinedButton from './ContainedAndOutlinedButton';
+import Validation from '../Main/StickyButtonPopUp/Validation';
 
 const InputField = styled(TextField)({
   background: '#232020',
@@ -13,6 +13,7 @@ const InputField = styled(TextField)({
   },
   '& .MuiInputBase-root': {
     color: 'white',
+    borderRadius: '0',
   },
   '& label.Mui-focused': {
     color: 'white',
@@ -31,7 +32,7 @@ const InputField = styled(TextField)({
   },
 });
 
-const InputNamePhone = ({ callback }) => {
+const InputNamePhone = ({buttonLabel, callback}) => {
   const [name, setName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [errors, setErrors] = useState({});
@@ -45,9 +46,8 @@ const InputNamePhone = ({ callback }) => {
   };
 
   const onSubmit = () => {
-    const _errors = Validation({ name, phoneNumber });
+    const _errors = Validation({name, phoneNumber});
     if (isEmpty(_errors) === false) {
-      console.log(_errors);
       setErrors(_errors);
     } else {
       callback();
@@ -59,44 +59,34 @@ const InputNamePhone = ({ callback }) => {
   }
 
   const handleNameKeyPress = (event) => {
-    const { charCode } = event;
+    const {charCode} = event;
     if (/\d/.test(String.fromCharCode(charCode))) {
       event.preventDefault();
     }
   }
 
   return (
-    <form
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        marginTop: '24px',
-        gap: '16px',
-      }}
-    >
+    <>
       <div>
-        <InputField onKeyPress={handleNameKeyPress} label="Введите ваше имя" onChange={handleInputName} />
+        <InputField onKeyPress={handleNameKeyPress} label="Введите ваше имя" onChange={handleInputName}/>
         {errors.name && (
-          <div style={{ display: 'flex', marginTop: '8px', color: 'red' }}>{errors.name}</div>
+          <div style={{display: 'flex', marginTop: '8px', color: 'red'}}>{errors.name}</div>
         )}
       </div>
 
       <div>
         <InputMask mask="+38(099) 999-99-99" required onChange={handleInputPhoneNumber}>
-          {() => <InputField label="Введите ваш телефон" />}
+          {() => <InputField label="Введите ваш телефон"/>}
         </InputMask>
         {errors.phone && (
-          <div style={{ display: 'flex', marginTop: '8px', color: 'red' }}>{errors.phone}</div>
+          <div style={{display: 'flex', marginTop: '8px', color: 'red'}}>{errors.phone}</div>
         )}
       </div>
 
-      <div style={{ marginTop: '8px' }}>
         <ContainedAndOutlinedButton onClick={onSubmit} variant="contained">
-          жду звонка
+          {buttonLabel}
         </ContainedAndOutlinedButton>
-      </div>
-    </form>
+    </>
   );
 };
 

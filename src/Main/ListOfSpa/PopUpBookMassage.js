@@ -1,9 +1,11 @@
 import { styled } from '@mui/material';
+import { useState } from 'react';
 import PopUpRectangle from '../../components/PopUpRectangle';
 import CrossButton from '../../components/CrossButton';
 import IconCross from '../../icons/IconCross';
 import DateCalendarValue from './DateCalendarValue';
 import RadioButtonCheckTime from './RadioButtonCheckTime';
+import InputNamePhone from '../../components/InputNamePhone';
 
 const TitleOfCart = styled('div')({
   color: 'white',
@@ -24,7 +26,14 @@ const PriceCart = styled('div')({
   fontSize: '20px',
 });
 
-const PopUpBookMassage = () => {
+const PopUpBookMassage = ({ details }) => {
+  const [succeed, setSucceed] = useState(false);
+
+  function handleSucceed() {
+    setSucceed(true);
+  }
+
+  console.log(details.selectedOils);
   return (
     <PopUpRectangle>
       <div
@@ -41,23 +50,23 @@ const PopUpBookMassage = () => {
             <div style={{ width: '120px', height: '120px' }}>
               <img
                 style={{ width: '100%', objectFit: 'cover', height: '100%' }}
-                src="../../img/ListOfMassage/image5.png"
+                src={details.img}
               />
             </div>
             <div style={{ marginLeft: '20px' }}>
-              <TitleOfCart>Масляный аромамассаж</TitleOfCart>
+              <TitleOfCart>{details.title}</TitleOfCart>
               <div
                 style={{ display: 'flex', gap: '15px', flexDirection: 'column', marginTop: '15px' }}
               >
-                <DetailsInformation>Длинетельность: 60 мин</DetailsInformation>
-                <DetailsInformation>Масло: апельсиновое, кокосовое</DetailsInformation>
+                <DetailsInformation>{`Длительность массажа: ${details.selectedMassageTime}`}</DetailsInformation>
+                <DetailsInformation>{`Масло: ${details.selectedOils}`}</DetailsInformation>
               </div>
             </div>
           </div>
 
           <div style={{ width: '30%', display: 'flex', justifyContent: 'space-between' }}>
             <div style={{ display: 'flex', alignItems: 'center' }}>
-              <PriceCart>400₴</PriceCart>
+              <PriceCart>{details.price}</PriceCart>
             </div>
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <CrossButton>
@@ -85,24 +94,53 @@ const PopUpBookMassage = () => {
           </DetailsInformation>
         </div>
       </div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          marginTop: '24px',
-          justifyContent: 'center',
-        }}
-      >
-        <DateCalendarValue />
+
+      <div>
         <div
           style={{
-            backgroundColor: '#161515',
-            width: '315px',
-            paddingLeft: '44px',
-            paddingTop: '18px',
+            display: 'flex',
+            flexDirection: 'row',
+            marginTop: '24px',
+            justifyContent: 'center',
           }}
         >
-          <RadioButtonCheckTime />
+          <DateCalendarValue />
+
+          <div
+            style={{
+              backgroundColor: '#161515',
+              width: '315px',
+              paddingLeft: '24px',
+              paddingTop: '18px',
+            }}
+          >
+            <RadioButtonCheckTime />
+          </div>
+        </div>
+
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+            marginTop: '24px',
+            gap: '16px',
+          }}
+        >
+          <InputNamePhone className="row-form" buttonLabel="подтвердить" callback={handleSucceed} />
+        </div>
+        <div style={{ textAlign: 'center', marginTop: '24px', marginBottom: '0', color: 'white' }}>
+          <span>
+            Нажимая на кнопку, Вы соглашаетесь с{' '}
+            <a
+              href="https://www.example.com/privacy-policy"
+              target="_blank"
+              style={{ color: 'white' }}
+              rel="noreferrer"
+            >
+              политикой конфиденциальности
+            </a>
+          </span>
         </div>
       </div>
     </PopUpRectangle>

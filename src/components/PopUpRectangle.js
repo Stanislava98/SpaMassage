@@ -3,7 +3,7 @@ import {styled} from "@mui/material";
 const Rectangle = styled('div')({
   backgroundColor: '#1C1A1A',
   width: '1090px',
-  zIndex: '104',
+  zIndex: '1460',
   position: 'fixed',
   top: '50%',
   left: '50%',

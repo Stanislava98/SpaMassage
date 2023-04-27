@@ -13,7 +13,7 @@ const StyledButton = styled(Button)(({ variant }) => ({
   textTransform: 'uppercase',
   borderRadius: '0',
   width: '180px',
-  height: '45px',
+  height: '55px',
   fontWeight: 'bold',
   fontSize: '14px',
   boxShadow: 'none',

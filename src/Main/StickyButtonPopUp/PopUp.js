@@ -2,8 +2,9 @@ import { styled } from '@mui/material';
 import { useState } from 'react';
 import SmallTitleDescription from '../../components/SmallTitleDescription';
 import IconCross from '../../icons/IconCross';
-import InputNamePhone from './InputNamePhone';
+import InputNamePhone from '../../components/InputNamePhone';
 import CrossButton from '../../components/CrossButton';
+import PopUpGradient from '../../components/PopUpGradient';
 
 const Rectangle = styled('div')({
   backgroundColor: '#1C1A1A',
@@ -72,17 +73,20 @@ const PopUp = () => {
                 <div className="description">Мы свяжемся с вами в ближайшее время</div>
               </SmallTitleDescription>
             </BlockWithText>
-            <InputNamePhone callback={handleSucceed} />
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                marginTop: '24px',
+                gap: '16px',
+              }}
+            >
+              <InputNamePhone buttonLabel="жду звонка" callback={handleSucceed} />
+            </div>
           </BlockTextInputs>
         ) : (
-          <BlockTextInputs>
-            <BlockWithText>
-              <SmallTitleDescription>
-                Спасибо, <br /> ваша заявка была принята!
-                <div className="description">Мы свяжемся с вами в ближайшее время</div>
-              </SmallTitleDescription>
-            </BlockWithText>
-          </BlockTextInputs>
+          <PopUpGradient />
         )}
       </BgWrapper>
     </Rectangle>

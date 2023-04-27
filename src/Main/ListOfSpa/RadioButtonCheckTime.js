@@ -4,6 +4,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { styled } from '@mui/material';
+import { useState } from 'react';
 
 const StyledFormControl = styled(FormControl)({
   '.MuiFormGroup-root': {
@@ -32,6 +33,7 @@ const StyledFormControl = styled(FormControl)({
     },
     '&.MuiButtonBase-root.Mui-checked': {
       color: '#FF5B00',
+      zIndex: 100000,
     },
     '&.MuiButtonBase-root': {
       color: 'white',
@@ -40,6 +42,13 @@ const StyledFormControl = styled(FormControl)({
 });
 
 const RadioButtonCheckTime = () => {
+  const [time, setTime] = useState('');
+
+  const handleClick = (event) => {
+    console.log('event =>', event.target.value);
+    setTime(event.target.value);
+  };
+
   return (
     <>
       <StyledFormControl>
@@ -49,12 +58,66 @@ const RadioButtonCheckTime = () => {
           defaultValue="female"
           name="radio-buttons-group"
         >
-          <FormControlLabel value="11:00 - 12:00" control={<Radio />} label="11:00 - 12:00" />
-          <FormControlLabel value="13:00 - 14:00" control={<Radio />} label="13:00 - 14:00" />
-          <FormControlLabel value="15:00 - 16:00" control={<Radio />} label="15:00 - 16:00" />
-          <FormControlLabel value="17:00 - 18:00" control={<Radio />} label="17:00 - 18:00" />
-          <FormControlLabel value="19:00 - 20:00" control={<Radio />} label="19:00 - 20:00" />
-          <FormControlLabel value="20:00 - 21:00" control={<Radio />} label="20:00 - 21:00" />
+          <FormControlLabel
+            control={
+              <Radio
+                checked={time === '11:00 - 12:00'}
+                value="11:00 - 12:00"
+                onClick={handleClick}
+              />
+            }
+            label="11:00 - 12:00"
+          />
+          <FormControlLabel
+            control={
+              <Radio
+                checked={time === '13:00 - 14:00'}
+                onClick={handleClick}
+                value="13:00 - 14:00"
+              />
+            }
+            label="13:00 - 14:00"
+          />
+          <FormControlLabel
+            control={
+              <Radio
+                checked={time === '15:00 - 16:00'}
+                value="15:00 - 16:00"
+                onClick={handleClick}
+              />
+            }
+            label="15:00 - 16:00"
+          />
+          <FormControlLabel
+            control={
+              <Radio
+                checked={time === '17:00 - 18:00'}
+                onClick={handleClick}
+                value="17:00 - 18:00"
+              />
+            }
+            label="17:00 - 18:00"
+          />
+          <FormControlLabel
+            control={
+              <Radio
+                checked={time === '19:00 - 20:00'}
+                onClick={handleClick}
+                value="19:00 - 20:00"
+              />
+            }
+            label="19:00 - 20:00"
+          />
+          <FormControlLabel
+            control={
+              <Radio
+                checked={time === '20:00 - 21:00'}
+                onClick={handleClick}
+                value="20:00 - 21:00"
+              />
+            }
+            label="20:00 - 21:00"
+          />
         </RadioGroup>
       </StyledFormControl>
     </>

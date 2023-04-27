@@ -19,17 +19,18 @@ const StyledSelect = styled(Select)({
     fontFamily: '"Raleway"',
   },
   '.MuiPopover-root.MuiMenu-root': {
-    zIndex: 9999,
+    zIndex: 1350,
   },
 });
 
-const SelectCheckOils = () => {
+const SelectCheckOils = ({ details }) => {
   const [oilName, setOilName] = useState([]);
 
   const handleChange = (event) => {
     const {
       target: { value },
     } = event;
+    details.selectedOils = value.join(', ');
     setOilName(typeof value === 'string' ? value.split(',') : value);
   };
 
@@ -63,7 +64,7 @@ const SelectCheckOils = () => {
           value={oilName}
           onChange={handleChange}
           input={<OutlinedInput label="Выбрать масла" style={{ borderRadius: '0' }} />}
-          renderValue={(selected) => selected.join(', ')}
+          renderValue={(selected) => selected.join(',')}
         >
           {oils.map((oil) => (
             <MenuItem key={oil} value={oil}>

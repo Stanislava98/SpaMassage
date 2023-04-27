@@ -16,30 +16,32 @@ const Root = styled('div')({
   },
 });
 
-const ChooseTime = () => {
-  const [value, setValue] = useState(60);
+const ChooseTime = ({ details }) => {
+  const [value, setValue] = useState('');
 
   const handleClick = (time) => {
+    details.selectedMassageTime = time;
     setValue(time);
   };
+
 
   return (
     <Root>
       <RectangleCheck
-        className={value === 60 ? 'active' : 'non-active'}
-        onClick={() => handleClick(60)}
+        className={value === '60 мин' ? 'active' : 'non-active'}
+        onClick={() => handleClick('60 мин')}
       >
         60 мин
       </RectangleCheck>
       <RectangleCheck
-        className={value === 90 ? 'active' : 'non-active'}
-        onClick={() => handleClick(90)}
+        className={value === '90 мин' ? 'active' : 'non-active'}
+        onClick={() => handleClick('90 мин')}
       >
         90 мин
       </RectangleCheck>
       <RectangleCheck
-        className={value === 120 ? 'active' : 'non-active'}
-        onClick={() => handleClick(120)}
+        className={value === '120 мин' ? 'active' : 'non-active'}
+        onClick={() => handleClick('120 мин')}
       >
         120 мин
       </RectangleCheck>
