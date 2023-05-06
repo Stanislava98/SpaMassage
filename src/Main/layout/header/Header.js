@@ -4,7 +4,6 @@ import { Link } from 'react-scroll';
 import SpaRelaxIcon from '../../logo/SpaRelaxIcon';
 import ChangeLanguages from './ChangeLanguages';
 import MenuBar from '../../../components/MenuBar';
-import RightSideNumberAddress from './RightSideNumberAddress';
 
 const StyledAppBar = styled(AppBar)({
   backgroundColor: '#1F1D1D',
@@ -58,8 +57,8 @@ const Header = () => {
       </StyledContainer>
       <Side>
         <ChangeLanguages />
-        <RightSideNumberAddress />
       </Side>
+
     </StyledAppBar>
   );
 };

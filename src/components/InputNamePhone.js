@@ -1,12 +1,17 @@
-import {TextField, styled} from '@mui/material';
+import { TextField, styled } from '@mui/material';
 import InputMask from 'react-input-mask';
-import {useState} from 'react';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import ContainedAndOutlinedButton from './ContainedAndOutlinedButton';
-import Validation from '../Main/StickyButtonPopUp/Validation';
+import { closeDialog, openDialog } from '../store/modalSlice';
+import PopUpGradient from './PopUpGradient';
+import ValidationNamePhone from "./ValidationNamePhone";
 
 const InputField = styled(TextField)({
   background: '#232020',
   width: '330px',
+  height: '55px',
+  boxSizing: 'border-box',
   label: {
     fontFamily: '"Raleway"',
     color: '#676464',
@@ -32,7 +37,9 @@ const InputField = styled(TextField)({
   },
 });
 
-const InputNamePhone = ({buttonLabel, callback}) => {
+const InputNamePhone = ({ buttonLabel, callback }) => {
+  const dispatch = useDispatch();
+
   const [name, setName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [errors, setErrors] = useState({});
@@ -46,12 +53,18 @@ const InputNamePhone = ({buttonLabel, callback}) => {
   };
 
   const onSubmit = () => {
-    const _errors = Validation({name, phoneNumber});
+    const _errors = ValidationNamePhone({ name, phoneNumber });
+
     if (isEmpty(_errors) === false) {
       setErrors(_errors);
-    } else {
-      callback();
+      console.log('errors', _errors);
+      return;
     }
+
+    dispatch(closeDialog());
+    dispatch(openDialog(<PopUpGradient test="Спасибо, мы свяжемся с Вами в ближайшее время" />));
+
+    callback();
   };
 
   function isEmpty(obj) {
@@ -59,33 +72,37 @@ const InputNamePhone = ({buttonLabel, callback}) => {
   }
 
   const handleNameKeyPress = (event) => {
-    const {charCode} = event;
+    const { charCode } = event;
     if (/\d/.test(String.fromCharCode(charCode))) {
       event.preventDefault();
     }
-  }
+  };
 
   return (
     <>
       <div>
-        <InputField onKeyPress={handleNameKeyPress} label="Введите ваше имя" onChange={handleInputName}/>
+        <InputField
+          onKeyPress={handleNameKeyPress}
+          label="Введите ваше имя"
+          onChange={handleInputName}
+        />
         {errors.name && (
-          <div style={{display: 'flex', marginTop: '8px', color: 'red'}}>{errors.name}</div>
+          <div style={{ display: 'flex', marginTop: '8px', color: 'red' }}>{errors.name}</div>
         )}
       </div>
 
       <div>
         <InputMask mask="+38(099) 999-99-99" required onChange={handleInputPhoneNumber}>
-          {() => <InputField label="Введите ваш телефон"/>}
+          {() => <InputField label="Введите ваш телефон" />}
         </InputMask>
         {errors.phone && (
-          <div style={{display: 'flex', marginTop: '8px', color: 'red'}}>{errors.phone}</div>
+          <div style={{ display: 'flex', marginTop: '8px', color: 'red' }}>{errors.phone}</div>
         )}
       </div>
 
-        <ContainedAndOutlinedButton onClick={onSubmit} variant="contained">
-          {buttonLabel}
-        </ContainedAndOutlinedButton>
+      <ContainedAndOutlinedButton onClick={onSubmit} variant="contained">
+        {buttonLabel}
+      </ContainedAndOutlinedButton>
     </>
   );
 };

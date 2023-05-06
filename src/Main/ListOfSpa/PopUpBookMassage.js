@@ -7,6 +7,7 @@ import DateCalendarValue from './DateCalendarValue';
 import RadioButtonCheckTime from './RadioButtonCheckTime';
 import InputNamePhone from '../../components/InputNamePhone';
 
+
 const TitleOfCart = styled('div')({
   color: 'white',
   textTransform: 'uppercase',
@@ -33,7 +34,6 @@ const PopUpBookMassage = ({ details }) => {
     setSucceed(true);
   }
 
-  console.log(details.selectedOils);
   return (
     <PopUpRectangle>
       <div

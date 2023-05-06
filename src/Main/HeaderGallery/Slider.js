@@ -1,6 +1,9 @@
 import { styled } from '@mui/material';
+import Slider from 'react-slick';
 import ArrowRightIcon from '../../icons/ArrowRightIcon';
 import IconArrowLeft from '../../icons/ArrowLeft';
+import slider from '../../fake-db/slider';
+
 
 const Root = styled('div')({
   display: 'flex',
@@ -34,19 +37,53 @@ const WrapperCountColumnRight = styled('div')({
   alignItems: 'end',
 });
 
-const Slider = () => {
+
+const Carousel = ({ slideShow }) => {
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 500,
+    nextArrow: false,
+    prevArrow: false,
+    swipe: true,
+  };
+
   return (
-    <Root>
+    <Slider {...settings}>
+
+
+
+
+      {slider.map((step) => (
+        <div key={step.label}>
+          <div>{step.default}</div>
+          <img
+            src={step.img}
+            alt={step.title}
+            style={{
+              height: "300px",
+              display: "block",
+              overflow: "hidden",
+              width: "100%"
+            }}
+          />
+        </div>
+      ))}
       <WrapperCountColumnLeft>
-        <LeftCountSlider>03</LeftCountSlider>
+        <LeftCountSlider>01</LeftCountSlider>
         <IconArrowLeft />
       </WrapperCountColumnLeft>
       <WrapperCountColumnRight>
-        <RightCountSlider>05</RightCountSlider>
-        <ArrowRightIcon />
+        <RightCountSlider>03</RightCountSlider>
+        <ArrowRightIcon {...settings} />
       </WrapperCountColumnRight>
-    </Root>
+
+    </Slider>
   );
 };
 
-export default Slider;
+export default Carousel;

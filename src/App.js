@@ -7,13 +7,12 @@ import MainMassageBlock from './Main/ListOfSpa/MainMassageBlock';
 import GiftCertificates from './Main/Certificates/GiftСertificates';
 import TitleCosmeticsBrands from './Main/Brands/TitleCosmeticsBrands';
 import BlockOfSpecialists from './Main/Therapists/BlockOfSpecialists';
-import Feedback from './Main/Feedback/Feedback';
 import Instagram from './Main/Instagram';
 import Footer from './Main/layout/footer/Footer';
 import StickyButton from './Main/StickyButtonPopUp/StickyButton';
 import store from './store/store';
 import ModalWrapper from './components/ModalWrapper';
-
+import ListOfComments from './Main/Feedback/ListOfComments';
 
 function App() {
   return (
@@ -30,7 +29,7 @@ function App() {
       </WrapperContainer>
       <BlockOfSpecialists />
       <WrapperContainer>
-        <Feedback />
+        <ListOfComments />
         <Instagram />
       </WrapperContainer>
       <Footer />

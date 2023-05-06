@@ -1,4 +1,6 @@
 import { styled } from '@mui/material';
+import CrossButton from './CrossButton';
+import IconCross from '../icons/IconCross';
 import SmallTitleDescription from './SmallTitleDescription';
 
 const Rectangle = styled('div')({
@@ -47,15 +49,17 @@ const BlockTextInputs = styled('div')({
   paddingLeft: '24px',
 });
 
-const PopUpGradient = () => {
+const PopUpGradient = ({ test }) => {
   return (
     <Rectangle>
       <BgWrapper>
+        <CrossButton>
+          <IconCross />
+        </CrossButton>
         <BlockTextInputs>
           <BlockWithText>
             <SmallTitleDescription>
-              Спасибо, <br /> ваша заявка была принята!
-              <div className="description">Мы свяжемся с вами в ближайшее время</div>
+              {test}
             </SmallTitleDescription>
           </BlockWithText>
         </BlockTextInputs>

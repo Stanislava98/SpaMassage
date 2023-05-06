@@ -1,8 +1,7 @@
-import {styled} from "@mui/material";
+import { styled } from '@mui/material';
 
 const DataGradient = styled('div')({
   background: 'linear-gradient(to top, rgba(175, 90, 62, 0.46), rgba(31, 29, 29, 0.01))',
-  minWidth: '100%',
 })
 
 const Gradient = (props) => {

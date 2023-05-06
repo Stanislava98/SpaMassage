@@ -2,7 +2,7 @@ import { styled } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
 import { openDialog } from '../../store/modalSlice';
-import PopUpMassage from "./PopUpMassage";
+import PopUpMassage from './PopUpMassage';
 
 const Cart = styled('div')({
   display: 'flex',

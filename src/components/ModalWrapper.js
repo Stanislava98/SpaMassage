@@ -25,7 +25,6 @@ const ModalWrapper = () => {
   }
 
   const handleClick = (event) => {
-    event.preventDefault();
     event.stopPropagation();
   };
 

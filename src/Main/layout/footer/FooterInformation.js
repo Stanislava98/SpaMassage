@@ -98,7 +98,7 @@ const FooterInformation = () => {
           paddingBottom: '30px',
         }}
       >
-        2023(С) разработано Stanislava Atamanuik
+        2023(С) разработано Stanislava Atamaniuk
       </div>
     </div>
   );

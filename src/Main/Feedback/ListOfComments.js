@@ -1,115 +1,51 @@
-import {styled, Typography} from "@mui/material";
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Rating from '@mui/material/Rating';
-import {useState} from "react";
-
-const Root = styled('div')({
-  marginTop: '30px',
-  display: 'flex',
-  flexDirection: 'row',
-})
-
-const Rectangle = styled('div')({
-  width: '337px',
-  border: '1px solid #E2702F',
-  display: 'flex',
-  color: 'white',
-  boxSizing: 'border-box',
-})
-
-const TitleInRectangle = styled('div')({
-  textTransform: 'uppercase',
-  fontWeight: 'bold',
-})
-
-const Information = styled('div')({
-  textAlign: 'center',
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '10px',
-  alignItems: 'center',
-  padding: '30px'
-})
-
-const DataName = styled('div')({
-  color: '#787171',
-  display: 'flex',
-  marginTop: '10px',
-  minWidth: '100%',
-  justifyContent: 'space-between',
-})
+import { useDispatch } from 'react-redux';
+import reviews from '../../fake-db/reviews';
+import FeedbackCard from './FeedbackCard';
+import CenterHeaderDescription from '../../components/CenterHeaderDescription';
+import DashWithSubheadings from '../../components/DashWithSubheadings';
+import Title from '../../components/Title';
+import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
+import { openDialog } from '../../store/modalSlice';
+import PopUpFeedback from './PopUpFeedback';
+import MarginWrapper from '../../components/MarginWrapper';
+import Box from "@mui/material/Box";
 
 const ListOfComments = () => {
-  const [value, setValue] = useState(4);
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(openDialog(<PopUpFeedback />));
+  };
+
   return (
-    <Box style={{display: 'flex', gap: '34px'}}
-      sx={{
-        '& > legend': { mt: 2 },
-      }}
-    >
-      <Root>
-        <Rectangle>
-          <div id='feedback'>
-            <Information>
-              <TitleInRectangle>« Отличное место для отдыха и расслабления »</TitleInRectangle>
-              <Rating name="read-only" value={value} size="small" readOnly />
-              <div>В первый раз взяла массаж горячими камнями. Мне очень понравился:
-                и общая атмосфера, и комфорт, и техника массажистки, все было круто!
-                Очень советую этот массаж. Администрация всегда приветливая.
-                Твёрдые пять баллов. Буду рекомендовать вас! Здесь действительно хорошо))
-              </div>
-              <DataName>
-                <div>Верочка</div>
-                <div>18 октября 2022</div>
-              </DataName>
-            </Information>
+    <MarginWrapper>
+      <CenterHeaderDescription>
+        <DashWithSubheadings>Отзывы о SPA RELAX</DashWithSubheadings>
+        <Title>
+          Отзывы клиентов
+          <br />— всегда приятно!
+        </Title>
+      </CenterHeaderDescription>
+      <div id="feedback" />
+      <Box
+        style={{ display: 'flex', gap: '34px' }}
+        sx={{
+          '& > legend': { mt: 2 },
+        }}
+      >
+        {reviews.map((item, index) => (
+          <div key={index}>
+            <FeedbackCard review={item} />
           </div>
-        </Rectangle>
-      </Root>
-      <Root>
-        <Rectangle>
-          <div>
-            <Information>
-              <TitleInRectangle>« Отличное место для отдыха и расслабления »</TitleInRectangle>
-              <Rating name="read-only" value={value} size="small" readOnly />
-              <div>В первый раз взяла массаж горячими камнями. Мне очень понравился:
-                и общая атмосфера, и комфорт, и техника массажистки, все было круто!
-                Очень советую этот массаж. Администрация всегда приветливая.
-                Твёрдые пять баллов. Буду рекомендовать вас! Здесь действительно хорошо))
-              </div>
-              <DataName>
-                <div>Верочка</div>
-                <div>18 октября 2022</div>
-              </DataName>
-            </Information>
-          </div>
-        </Rectangle>
-      </Root>
-      <Root>
-        <Rectangle>
-          <div>
-            <Information>
-              <TitleInRectangle>« Отличное место для отдыха и расслабления »</TitleInRectangle>
-              <Rating name="read-only" value={value} size="small" readOnly />
-              <div>В первый раз взяла массаж горячими камнями. Мне очень понравился:
-                и общая атмосфера, и комфорт, и техника массажистки, все было круто!
-                Очень советую этот массаж. Администрация всегда приветливая.
-                Твёрдые пять баллов. Буду рекомендовать вас! Здесь действительно хорошо))
-              </div>
-              <DataName>
-                <div>Верочка</div>
-                <div>18 октября 2022</div>
-              </DataName>
-            </Information>
-          </div>
-        </Rectangle>
-      </Root>
-    </Box>
+        ))}
+      </Box>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
+        <ContainedAndOutlinedButton onClick={handleClick} variant="contained">
+          Добавить отзыв
+        </ContainedAndOutlinedButton>
+      </div>
+    </MarginWrapper>
   );
-}
+};
 
 export default ListOfComments;
-
-
-
