@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux';
 import Header from './Main/layout/header/Header';
 import WrapperContainer from './WrapperContainer';
-import TextGallery from './Main/HeaderGallery/TextGallery';
+import MainSection from './Main/HeaderGallery/MainSection';
 import AboutSpa from './Main/AboutSpa/AboutSpa';
 import MainMassageBlock from './Main/ListOfSpa/MainMassageBlock';
 import GiftCertificates from './Main/Certificates/GiftСertificates';
@@ -19,7 +19,7 @@ function App() {
     <Provider store={store}>
       <Header />
       <WrapperContainer>
-        <TextGallery />
+        <MainSection />
         <AboutSpa />
         <MainMassageBlock />
       </WrapperContainer>

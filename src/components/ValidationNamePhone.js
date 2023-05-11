@@ -10,7 +10,7 @@ const ValidationNamePhone = (values) => {
     errors.name = 'Не менее 2 символов';
   }
   if (values.name < 2 && values.name.length === 0) {
-    errors.name = 'Пожалуйста, введите ваше имя';
+    errors.name = 'Пожалуйста, введите имя';
   }
   if (!phone.test(values.phoneNumber)) {
     errors.phone = 'Некорректный формат номера телефона';

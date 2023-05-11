@@ -6,13 +6,16 @@ const TitleAndDescription = styled('div')({
   fontSize: '24px',
   fontWeight: 'bold',
   textTransform: 'uppercase',
-  width: '98%',
+  width: '100%',
   '& .description': {
     fontWeight: 'normal',
     fontSize: '16px',
     textTransform: 'none',
     marginTop: '5px',
     fontFamily: 'Raleway, serif',
+  },
+  '& .title': {
+    width: '100% !important',
   },
 });
 

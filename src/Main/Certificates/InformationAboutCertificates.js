@@ -1,6 +1,9 @@
 import { styled } from '@mui/material';
 import Title from '../../components/Title';
 import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
+import {useDispatch} from "react-redux";
+import {openDialog} from "../../store/modalSlice";
+import PopUpBuyCertificate from "./PopUpBuyCertificate";
 
 const Description = styled('div')({
   color: 'white',
@@ -9,6 +12,12 @@ const Description = styled('div')({
 });
 
 const InformationAboutCertificates = () => {
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch(openDialog(<PopUpBuyCertificate />))
+  }
+
   return (
     <div id='certificates'>
       <img
@@ -28,9 +37,9 @@ const InformationAboutCertificates = () => {
           </p>
         </Description>
         <div style={{ display: 'flex', flexDirection: 'row', gap: '34px', marginTop: '40px' }}>
-          <ContainedAndOutlinedButton variant="outlined">1000₴</ContainedAndOutlinedButton>
-          <ContainedAndOutlinedButton variant="outlined">1500₴</ContainedAndOutlinedButton>
-          <ContainedAndOutlinedButton variant="outlined">2000₴</ContainedAndOutlinedButton>
+          <ContainedAndOutlinedButton onClick={handleClick} variant="outlined">1000₴</ContainedAndOutlinedButton>
+          <ContainedAndOutlinedButton onClick={handleClick} variant="outlined">1500₴</ContainedAndOutlinedButton>
+          <ContainedAndOutlinedButton onClick={handleClick} variant="outlined">2000₴</ContainedAndOutlinedButton>
         </div>
       </div>
     </div>

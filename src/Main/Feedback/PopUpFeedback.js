@@ -29,7 +29,6 @@ const StyledRating = styled(Rating)({
 
 const Rectangle = styled('div')({
   backgroundColor: '#1C1A1A',
-  height: '624px',
   width: '724px',
   position: 'fixed',
   top: '50%',

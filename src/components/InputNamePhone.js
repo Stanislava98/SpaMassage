@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import ContainedAndOutlinedButton from './ContainedAndOutlinedButton';
 import { closeDialog, openDialog } from '../store/modalSlice';
 import PopUpGradient from './PopUpGradient';
-import ValidationNamePhone from "./ValidationNamePhone";
+import ValidationNamePhone from './ValidationNamePhone';
 
 const InputField = styled(TextField)({
   background: '#232020',

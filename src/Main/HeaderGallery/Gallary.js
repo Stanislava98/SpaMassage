@@ -1,19 +1,19 @@
-import {styled} from "@mui/material";
+import { styled } from '@mui/material';
 
 const Root = styled('div')({
   '.fill': {
     img: {
       maxWidth: '100%',
       maxHeight: '100%',
-    }
+    },
   },
 });
 
-const Gallery = () => {
+const Gallery = ({ image }) => {
   return (
     <Root>
-      <div id='main' className="fill">
-        <img src="img/1.png" alt="" />
+      <div id="main" className="fill">
+        <img src={image} alt="" />
       </div>
     </Root>
   );

@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import Box from '@mui/material/Box';
 import reviews from '../../fake-db/reviews';
 import FeedbackCard from './FeedbackCard';
 import CenterHeaderDescription from '../../components/CenterHeaderDescription';
@@ -8,7 +9,6 @@ import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedBut
 import { openDialog } from '../../store/modalSlice';
 import PopUpFeedback from './PopUpFeedback';
 import MarginWrapper from '../../components/MarginWrapper';
-import Box from "@mui/material/Box";
 
 const ListOfComments = () => {
   const dispatch = useDispatch();
