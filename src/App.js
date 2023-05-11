@@ -1,18 +1,18 @@
 import { Provider } from 'react-redux';
-import Header from './Main/layout/header/Header';
+import Header from './main/layout/header/Header';
 import WrapperContainer from './WrapperContainer';
-import MainSection from './Main/HeaderGallery/MainSection';
-import AboutSpa from './Main/AboutSpa/AboutSpa';
-import MainMassageBlock from './Main/ListOfSpa/MainMassageBlock';
-import GiftCertificates from './Main/Certificates/GiftСertificates';
-import TitleCosmeticsBrands from './Main/Brands/TitleCosmeticsBrands';
-import BlockOfSpecialists from './Main/Therapists/BlockOfSpecialists';
-import Instagram from './Main/Instagram';
-import Footer from './Main/layout/footer/Footer';
-import StickyButton from './Main/StickyButtonPopUp/StickyButton';
+import MainSection from './main/HeaderGallery/MainSection';
+import AboutSpa from './main/AboutSpa/AboutSpa';
+import MainMassageBlock from './main/ListOfSpa/MainMassageBlock';
+import GiftCertificates from './main/Certificates/GiftСertificates';
+import TitleCosmeticsBrands from './main/Brands/TitleCosmeticsBrands';
+import BlockOfSpecialists from './main/Therapists/BlockOfSpecialists';
+import Instagram from './main/Instagram';
+import Footer from './main/layout/footer/Footer';
+import StickyButton from './main/StickyButtonPopUp/StickyButton';
 import store from './store/store';
 import ModalWrapper from './components/ModalWrapper';
-import ListOfComments from './Main/Feedback/ListOfComments';
+import ListOfComments from './main/Feedback/ListOfComments';
 
 function App() {
   return (
