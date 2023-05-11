@@ -8,7 +8,7 @@ const Root = styled('div')({
 });
 
 const Rectangle = styled('div')({
-  width: '337px',
+  width: '385px',
   height: '372px',
   border: '1px solid #E2702F',
   display: 'flex',
