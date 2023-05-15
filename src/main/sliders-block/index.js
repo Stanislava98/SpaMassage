@@ -1,7 +1,7 @@
 import { styled } from '@mui/material';
 import { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
+import StyledButtonVariation from '../../components/StyledButtonVariation';
 import Gallery from './GalleryImages';
 import Pagination from './Pagination';
 import sliders from '../../fake-db/sliders';
@@ -85,9 +85,9 @@ const GallerySliderBlock = () => {
         <DescriptionTextGallery>
           <p>{slider.description}</p>
           <div style={{ marginTop: '40px' }}>
-            <ContainedAndOutlinedButton variant="contained" onClick={handleClick}>
+            <StyledButtonVariation variant="contained" onClick={handleClick}>
               записаться
-            </ContainedAndOutlinedButton>
+            </StyledButtonVariation>
           </div>
           <Pagination
             page={slider.numberOfPage}

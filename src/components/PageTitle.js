@@ -15,19 +15,19 @@ const TitleDetails = styled('div')(({ color }) => ({
   margin: 0,
   fontWeight: 'bold',
   flexShrink: 0,
-  'a': {
+  a: {
     color: `${colors.orange}`,
     textDecoration: 'none',
   },
   'a:hover': {
     color: `${colors.orangeOnHover}`,
-  }
+  },
 }));
 
-const Title = (props) => {
+const PageTitle = (props) => {
   const color = colors[props.color ?? 'default'];
 
   return <TitleDetails color={color}>{props.children}</TitleDetails>;
 };
 
-export default Title;
+export default PageTitle;

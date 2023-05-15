@@ -5,7 +5,7 @@ import IconCross from '../../icons/IconCross';
 import SelectOils from './SelectOils';
 import TimeSelect from './TimeSelect';
 import Accordions from './Accordions';
-import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
+import StyledButtonVariation from '../../components/StyledButtonVariation';
 import PopUpRectangle from '../../components/PopUpRectangle';
 import {closeDialog, openDialog} from "../../store/modalSlice";
 import PopUpBookMassage from "./PopUpBookMassage";
@@ -87,10 +87,10 @@ const PopUpMassage = ({ details }) => {
                 secondAnswer={details.secondAnswer}
               />
               <div style={{bottom: '0', position: 'absolute'}}>
-                <ContainedAndOutlinedButton variant="contained" onClick={handleClick}
+                <StyledButtonVariation variant="contained" onClick={handleClick}
                 >
                   заказать услугу
-                </ContainedAndOutlinedButton>
+                </StyledButtonVariation>
               </div>
 
             </div>

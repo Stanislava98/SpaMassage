@@ -1,7 +1,7 @@
 import { styled } from '@mui/material';
 import HorizontalBar from '../icons/HorizontalBar';
 
-const Subheading = styled('div')({
+const SubHeading = styled('div')({
   color: 'white',
   display: 'flex',
   flexDirection: 'row',
@@ -9,13 +9,13 @@ const Subheading = styled('div')({
   gap: '15px',
 });
 
-const DashWithSubheadings = (props) => {
+const DashWithSubHeadings = (props) => {
   return (
     <div id='spa' style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
       <HorizontalBar />
-      <Subheading>{props.children}</Subheading>
+      <SubHeading>{props.children}</SubHeading>
     </div>
   );
 };
 
-export default DashWithSubheadings;
+export default DashWithSubHeadings;

@@ -1,7 +1,7 @@
 import MarginWrapper from "../../components/MarginWrapper";
-import CenterHeaderDescription from "../../components/CenterHeaderDescription";
-import DashWithSubheadings from "../../components/DashWithSubheadings";
-import Title from "../../components/Title";
+import CenteredHeader from "../../components/CenteredHeader";
+import DashWithSubheadings from "../../components/DashWithSubHeadings";
+import PageTitle from "../../components/PageTitle";
 import {styled} from "@mui/material";
 
 const PicturesBlock = styled('div')({
@@ -14,13 +14,13 @@ const PicturesBlock = styled('div')({
 const Instagram = () => {
   return (
   <MarginWrapper>
-    <CenterHeaderDescription>
+    <CenteredHeader>
       <DashWithSubheadings>Подписывайтесь, чтоб не пропустить!</DashWithSubheadings>
-      <Title>еженедельные призы в инстаграме</Title>
-      <Title><a href="my-project/src/main/instagram/Instagram"
-                               target="_blank"
-                               rel="noopener noreferrer">@sparelax</a></Title>
-    </CenterHeaderDescription>
+      <PageTitle>еженедельные призы в инстаграме</PageTitle>
+      <PageTitle><a href="my-project/src/main/instagram/Instagram"
+                    target="_blank"
+                    rel="noopener noreferrer">@sparelax</a></PageTitle>
+    </CenteredHeader>
     <PicturesBlock>
       <img src={'img/Insta/1.png'}/>
       <img src={'img/Insta/2.png'}/>

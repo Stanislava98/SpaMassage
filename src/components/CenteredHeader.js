@@ -7,8 +7,8 @@ const HeaderDescription = styled('div')({
   textAlign: 'center',
 });
 
-const CenterHeaderDescription = (props) => {
+const CenteredHeader = (props) => {
   return <HeaderDescription>{props.children}</HeaderDescription>;
 };
 
-export default CenterHeaderDescription;
+export default CenteredHeader;

@@ -1,6 +1,6 @@
 import { styled } from '@mui/material';
 import { useDispatch } from 'react-redux';
-import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
+import StyledButtonVariation from '../../components/StyledButtonVariation';
 import { openDialog } from '../../store/modalSlice';
 import PopUpMassage from './PopUpMassage';
 
@@ -62,7 +62,7 @@ const MassageCart = ({ massage }) => {
             <PriceCart>{massage.price}</PriceCart>
           </TitleAndPrice>
           <Description>{massage.text}</Description>
-          <ContainedAndOutlinedButton onClick={handleClick} variant="outlined">записаться</ContainedAndOutlinedButton>
+          <StyledButtonVariation onClick={handleClick} variant="outlined">записаться</StyledButtonVariation>
         </div>
       </div>
     </Cart>

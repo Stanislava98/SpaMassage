@@ -2,10 +2,10 @@ import { useDispatch } from 'react-redux';
 import Box from '@mui/material/Box';
 import reviews from '../../fake-db/reviews';
 import FeedbackCard from './FeedbackCard';
-import CenterHeaderDescription from '../../components/CenterHeaderDescription';
-import DashWithSubheadings from '../../components/DashWithSubheadings';
-import Title from '../../components/Title';
-import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
+import CenteredHeader from '../../components/CenteredHeader';
+import DashWithSubheadings from '../../components/DashWithSubHeadings';
+import PageTitle from '../../components/PageTitle';
+import StyledButtonVariation from '../../components/StyledButtonVariation';
 import { openDialog } from '../../store/modalSlice';
 import PopUpFeedback from './PopUpFeedback';
 import MarginWrapper from '../../components/MarginWrapper';
@@ -19,13 +19,13 @@ const FeedBack = () => {
 
   return (
     <MarginWrapper>
-      <CenterHeaderDescription>
+      <CenteredHeader>
         <DashWithSubheadings>Отзывы о SPA RELAX</DashWithSubheadings>
-        <Title>
+        <PageTitle>
           Отзывы клиентов
           <br />— всегда приятно!
-        </Title>
-      </CenterHeaderDescription>
+        </PageTitle>
+      </CenteredHeader>
       <div id="feedback" />
       <Box
         style={{ display: 'flex', gap: '34px', justifyContent: 'center' }}
@@ -40,9 +40,9 @@ const FeedBack = () => {
         ))}
       </Box>
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
-        <ContainedAndOutlinedButton onClick={handleClick} variant="contained">
+        <StyledButtonVariation onClick={handleClick} variant="contained">
           Добавить отзыв
-        </ContainedAndOutlinedButton>
+        </StyledButtonVariation>
       </div>
     </MarginWrapper>
   );

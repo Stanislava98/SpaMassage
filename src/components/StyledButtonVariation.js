@@ -38,13 +38,13 @@ const StyledButton = styled(Button)(({ variant }) => ({
   },
 }));
 
-const ContainedAndOutlinedButton = (props) => {
+const StyledButtonVariation = (props) => {
   const variation = variants[props.variant ?? 'contained'];
   return <StyledButton variation={variation} {...props} />;
 };
 
-ContainedAndOutlinedButton.propTypes = {
+StyledButtonVariation.propTypes = {
   variant: PropTypes.string.isRequired,
 };
 
-export default ContainedAndOutlinedButton;
+export default StyledButtonVariation;

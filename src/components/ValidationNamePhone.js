@@ -16,6 +16,6 @@ const ValidationNamePhone = (values) => {
     errors.phone = 'Некорректный формат номера телефона';
   }
   return errors;
-}
+};
 
 export default ValidationNamePhone;

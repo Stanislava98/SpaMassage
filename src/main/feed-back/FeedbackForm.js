@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Validation from '../../components/Validation';
-import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
+import StyledButtonVariation from '../../components/StyledButtonVariation';
 import PopUpGradient from '../../components/PopUpGradient';
 import { closeDialog, openDialog } from '../../store/modalSlice';
 
@@ -162,9 +162,9 @@ const FeedbackForm = ({ buttonLabel }) => {
         )}
       </Box>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <ContainedAndOutlinedButton onClick={onSubmit} variant="contained">
+        <StyledButtonVariation onClick={onSubmit} variant="contained">
           {buttonLabel}
-        </ContainedAndOutlinedButton>
+        </StyledButtonVariation>
       </div>
     </div>
   );

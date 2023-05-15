@@ -1,4 +1,4 @@
-import {styled} from "@mui/material";
+import { styled } from '@mui/material';
 
 const Root = styled('div')({
   fontSize: '14px',
@@ -11,12 +11,10 @@ const Root = styled('div')({
     color: '#dc5b13',
     cursor: 'pointer',
   },
-})
+});
 
 const MenuBar = (props) => {
-  return (
-    <Root>{props.children}</Root>
-  )
-}
+  return <Root>{props.children}</Root>;
+};
 
 export default MenuBar;

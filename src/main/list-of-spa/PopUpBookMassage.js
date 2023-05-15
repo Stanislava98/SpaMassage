@@ -5,7 +5,7 @@ import CrossButton from '../../components/CrossButton';
 import IconCross from '../../icons/IconCross';
 import Calendar from './Calendar';
 import RadioButtonCheckTime from './RadioButtonCheckTime';
-import InputNamePhone from '../../components/InputNamePhone';
+import ApplicationForm from '../../components/ApplicationForm';
 
 const TitleOfCart = styled('div')({
   color: 'white',
@@ -126,7 +126,7 @@ const PopUpBookMassage = ({ details }) => {
             gap: '16px',
           }}
         >
-          <InputNamePhone className="row-form" buttonLabel="подтвердить" callback={handleSucceed} />
+          <ApplicationForm className="row-form" buttonLabel="подтвердить" callback={handleSucceed} />
         </div>
         <div style={{ textAlign: 'center', marginTop: '24px', marginBottom: '0', color: 'white' }}>
           <span>

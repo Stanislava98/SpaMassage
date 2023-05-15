@@ -7,7 +7,7 @@ import InputFieldSelectDelivery from './InputFieldSelectDelivery';
 import ValidationNamePhone from '../../components/ValidationNamePhone';
 import { closeDialog, openDialog } from '../../store/modalSlice';
 import PopUpGradient from '../../components/PopUpGradient';
-import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
+import StyledButtonVariation from '../../components/StyledButtonVariation';
 
 const InputFieldNamePhone = ({ callback }) => {
   const dispatch = useDispatch();
@@ -134,9 +134,9 @@ const InputFieldNamePhone = ({ callback }) => {
         <InputFieldSelectDelivery />
 
         <div style={{ display: 'flex', marginTop: '34px', justifyContent: 'center' }}>
-          <ContainedAndOutlinedButton onClick={onSubmit} variant="contained">
+          <StyledButtonVariation onClick={onSubmit} variant="contained">
             отправить
-          </ContainedAndOutlinedButton>
+          </StyledButtonVariation>
         </div>
       </Box>
     </>

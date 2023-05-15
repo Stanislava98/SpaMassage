@@ -1,16 +1,16 @@
 import MassageListInformation from './MassageListInformation';
-import Title from '../../components/Title';
-import DashWithSubheadings from '../../components/DashWithSubheadings';
+import PageTitle from '../../components/PageTitle';
+import DashWithSubheadings from '../../components/DashWithSubHeadings';
 import MarginWrapper from '../../components/MarginWrapper';
-import CenterHeaderDescription from '../../components/CenterHeaderDescription';
+import CenteredHeader from '../../components/CenteredHeader';
 
 const SpaServicesPage = () => {
   return (
     <MarginWrapper>
-      <CenterHeaderDescription>
+      <CenteredHeader>
         <DashWithSubheadings>Райское наслаждение</DashWithSubheadings>
-        <Title>Услуги spa relax</Title>
-      </CenterHeaderDescription>
+        <PageTitle>Услуги spa relax</PageTitle>
+      </CenteredHeader>
       <MassageListInformation />
     </MarginWrapper>
   );

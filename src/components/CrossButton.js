@@ -1,7 +1,6 @@
-import {IconButton, styled} from '@mui/material';
-import {useDispatch} from 'react-redux';
-import {closeDialog} from '../store/modalSlice';
-import IconCross from "../icons/IconCross";
+import { IconButton, styled } from '@mui/material';
+import { useDispatch } from 'react-redux';
+import { closeDialog } from '../store/modalSlice';
 
 const CrossIconButton = styled(IconButton)({
   backgroundColor: 'none',
@@ -19,7 +18,6 @@ const CrossButton = (props) => {
   };
 
   return (
-
     <div
       style={{
         display: 'flex',

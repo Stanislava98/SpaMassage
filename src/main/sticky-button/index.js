@@ -3,7 +3,7 @@ import { Slide, styled } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import CirclePhone from '../../icons/CirclePhone';
 import { openDialog } from '../../store/modalSlice';
-import PopUp from './PopUp';
+import PopUpSucceed from './PopUpSucceed';
 
 const ButtonStyled = styled('button')({
   border: 0,
@@ -64,7 +64,7 @@ const StickyButton = () => {
   }, []);
 
   const handleClick = () => {
-    dispatch(openDialog(<PopUp />));
+    dispatch(openDialog(<PopUpSucceed />));
   };
 
   return (

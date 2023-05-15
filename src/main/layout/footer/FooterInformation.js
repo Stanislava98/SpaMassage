@@ -1,8 +1,8 @@
 import Divider from '@mui/material/Divider';
 import {styled} from '@mui/material';
 import {Link} from 'react-scroll';
-import DashWithSubheadings from '../../../components/DashWithSubheadings';
-import Title from '../../../components/Title';
+import DashWithSubheadings from '../../../components/DashWithSubHeadings';
+import PageTitle from '../../../components/PageTitle';
 import IconTelegram from '../../../icons/footericon/IconTelegram';
 import IconFacebook from '../../../icons/footericon/IconFacebook';
 import IconInstagram from '../../../icons/footericon/IconInstagram';
@@ -30,7 +30,7 @@ const FooterInformation = () => {
     <div>
       <div>
         <DashWithSubheadings>Наш адрес</DashWithSubheadings>
-        <Title>Как нас найти?</Title>
+        <PageTitle>Как нас найти?</PageTitle>
       </div>
 
       <BlockTextIcons>

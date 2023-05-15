@@ -2,7 +2,7 @@ import { TextField, styled } from '@mui/material';
 import InputMask from 'react-input-mask';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import ContainedAndOutlinedButton from './ContainedAndOutlinedButton';
+import StyledButtonVariation from './StyledButtonVariation';
 import { closeDialog, openDialog } from '../store/modalSlice';
 import PopUpGradient from './PopUpGradient';
 import ValidationNamePhone from './ValidationNamePhone';
@@ -37,7 +37,7 @@ const InputField = styled(TextField)({
   },
 });
 
-const InputNamePhone = ({ buttonLabel, callback }) => {
+const ApplicationForm = ({ buttonLabel, callback }) => {
   const dispatch = useDispatch();
 
   const [name, setName] = useState('');
@@ -100,11 +100,11 @@ const InputNamePhone = ({ buttonLabel, callback }) => {
         )}
       </div>
 
-      <ContainedAndOutlinedButton onClick={onSubmit} variant="contained">
+      <StyledButtonVariation onClick={onSubmit} variant="contained">
         {buttonLabel}
-      </ContainedAndOutlinedButton>
+      </StyledButtonVariation>
     </>
   );
 };
 
-export default InputNamePhone;
+export default ApplicationForm;

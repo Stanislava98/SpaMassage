@@ -1,16 +1,16 @@
-import Title from '../../components/Title';
+import PageTitle from '../../components/PageTitle';
 import MarginWrapper from '../../components/MarginWrapper';
-import DashWithSubheadings from '../../components/DashWithSubheadings';
-import CenterHeaderDescription from '../../components/CenterHeaderDescription';
+import DashWithSubheadings from '../../components/DashWithSubHeadings';
+import CenteredHeader from '../../components/CenteredHeader';
 import TherapistList from './TherapistList';
 
 const BlockWithMassageTherapists = () => {
   return (
     <MarginWrapper>
-      <CenterHeaderDescription>
+      <CenteredHeader>
         <DashWithSubheadings>Их умения творят настоящие чудеса</DashWithSubheadings>
-        <Title>сертифицированные массажисты</Title>
-      </CenterHeaderDescription>
+        <PageTitle>сертифицированные массажисты</PageTitle>
+      </CenteredHeader>
       <TherapistList />
     </MarginWrapper>
   );

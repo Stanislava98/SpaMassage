@@ -1,7 +1,7 @@
 import { styled } from '@mui/material';
 import { useDispatch } from 'react-redux';
-import Title from '../../components/Title';
-import ContainedAndOutlinedButton from '../../components/ContainedAndOutlinedButton';
+import PageTitle from '../../components/PageTitle';
+import StyledButtonVariation from '../../components/StyledButtonVariation';
 import { openDialog } from '../../store/modalSlice';
 import PopUpBuyCertificate from './PopUpBuyCertificate';
 
@@ -26,7 +26,7 @@ const InformationAboutCertificates = () => {
         alt=""
       />
       <div style={{ paddingTop: '100px', paddingBottom: '100px' }}>
-        <Title>подарочные сертификаты</Title>
+        <PageTitle>подарочные сертификаты</PageTitle>
         <Description>
           Необычный и эксклюзивный подарок, который даёт прекрасную возможность подарить своим
           любимым в честь праздника, а также друзьям или родственникам, даже бизнес партнёрам нечто
@@ -37,15 +37,15 @@ const InformationAboutCertificates = () => {
           </p>
         </Description>
         <div style={{ display: 'flex', flexDirection: 'row', gap: '34px', marginTop: '40px' }}>
-          <ContainedAndOutlinedButton onClick={handleClick} variant="outlined">
+          <StyledButtonVariation onClick={handleClick} variant="outlined">
             1000₴
-          </ContainedAndOutlinedButton>
-          <ContainedAndOutlinedButton onClick={handleClick} variant="outlined">
+          </StyledButtonVariation>
+          <StyledButtonVariation onClick={handleClick} variant="outlined">
             1500₴
-          </ContainedAndOutlinedButton>
-          <ContainedAndOutlinedButton onClick={handleClick} variant="outlined">
+          </StyledButtonVariation>
+          <StyledButtonVariation onClick={handleClick} variant="outlined">
             2000₴
-          </ContainedAndOutlinedButton>
+          </StyledButtonVariation>
         </div>
       </div>
     </div>

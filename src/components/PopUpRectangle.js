@@ -1,4 +1,4 @@
-import {styled} from "@mui/material";
+import { styled } from '@mui/material';
 
 const Rectangle = styled('div')({
   backgroundColor: '#1C1A1A',
@@ -12,11 +12,8 @@ const Rectangle = styled('div')({
   padding: '24px',
 });
 
-
 const PopUpRectangle = (props) => {
-  return (
-    <Rectangle>{props.children}</Rectangle>
-  )
-}
+  return <Rectangle>{props.children}</Rectangle>;
+};
 
 export default PopUpRectangle;

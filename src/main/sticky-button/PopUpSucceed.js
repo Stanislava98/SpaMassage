@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { styled } from '@mui/material';
 import SmallTitleDescription from '../../components/SmallTitleDescription';
-import InputNamePhone from '../../components/InputNamePhone';
+import ApplicationForm from '../../components/ApplicationForm';
 import CrossButton from '../../components/CrossButton';
 import IconCross from '../../icons/IconCross';
 
@@ -52,7 +52,7 @@ const BlockTextInputs = styled('div')({
   paddingLeft: '24px',
 });
 
-const InputPopUpSucceed = () => {
+const PopUpSucceed = () => {
   const [succeed, setSucceed] = useState(false);
 
   function handleSucceed() {
@@ -82,7 +82,7 @@ const InputPopUpSucceed = () => {
                 gap: '16px',
               }}
             >
-              <InputNamePhone buttonLabel="жду звонка" callback={handleSucceed} />
+              <ApplicationForm buttonLabel="жду звонка" callback={handleSucceed} />
             </div>
           </BlockTextInputs>
         </BgWrapper>
@@ -91,4 +91,4 @@ const InputPopUpSucceed = () => {
   );
 };
 
-export default InputPopUpSucceed;
+export default PopUpSucceed;

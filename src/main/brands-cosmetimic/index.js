@@ -1,5 +1,5 @@
-import Title from '../../components/Title';
-import DashWithSubheadings from '../../components/DashWithSubheadings';
+import PageTitle from '../../components/PageTitle';
+import DashWithSubheadings from '../../components/DashWithSubHeadings';
 import BrandGrid from './BrandGrid';
 import MarginWrapper from '../../components/MarginWrapper';
 
@@ -7,10 +7,10 @@ const Brandes = () => {
   return (
     <MarginWrapper>
       <DashWithSubheadings>Лучшие бренды косметики</DashWithSubheadings>
-      <Title>
+      <PageTitle>
         Косметика <br />
         известных брендов
-      </Title>
+      </PageTitle>
       <BrandGrid />
     </MarginWrapper>
   );
