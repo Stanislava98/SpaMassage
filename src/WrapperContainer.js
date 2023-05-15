@@ -5,11 +5,7 @@ const Start = styled('div')({
 });
 
 const WrapperContainer = (props) => {
-  return (
-    <Start>
-      {props.children}
-    </Start>
-  );
+  return <Start>{props.children}</Start>;
 };
 
 export default WrapperContainer;

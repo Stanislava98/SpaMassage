@@ -1,35 +1,35 @@
 import { Provider } from 'react-redux';
-import Header from './main/layout/header/Header';
+import Header from './main/layout/header';
 import WrapperContainer from './WrapperContainer';
-import MainSection from './main/HeaderGallery/MainSection';
-import AboutSpa from './main/AboutSpa/AboutSpa';
-import MainMassageBlock from './main/ListOfSpa/MainMassageBlock';
-import GiftCertificates from './main/Certificates/GiftСertificates';
-import TitleCosmeticsBrands from './main/Brands/TitleCosmeticsBrands';
-import BlockOfSpecialists from './main/Therapists/BlockOfSpecialists';
-import Instagram from './main/Instagram';
-import Footer from './main/layout/footer/Footer';
-import StickyButton from './main/StickyButtonPopUp/StickyButton';
+import GallerySliderBlock from './main/sliders-block';
+import SpaServicesPage from './main/list-of-spa';
+import GiftCertificates from './main/gift-certificate';
+import Index from './main/therapists';
+import Instagram from './main/instagram/Instagram';
+import Footer from './main/layout/footer';
+import StickyButton from './main/sticky-button';
 import store from './store/store';
 import ModalWrapper from './components/ModalWrapper';
-import ListOfComments from './main/Feedback/ListOfComments';
+import FeedBack from './main/feed-back';
+import AboutSpa from './main/about-spa';
+import Brandes from './main/brands-cosmetimic';
 
 function App() {
   return (
     <Provider store={store}>
       <Header />
       <WrapperContainer>
-        <MainSection />
+        <GallerySliderBlock />
         <AboutSpa />
-        <MainMassageBlock />
+        <SpaServicesPage />
       </WrapperContainer>
       <GiftCertificates />
       <WrapperContainer>
-        <TitleCosmeticsBrands />
+        <Brandes />
       </WrapperContainer>
-      <BlockOfSpecialists />
+      <Index />
       <WrapperContainer>
-        <ListOfComments />
+        <FeedBack />
         <Instagram />
       </WrapperContainer>
       <Footer />
