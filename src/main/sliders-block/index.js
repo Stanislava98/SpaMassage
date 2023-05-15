@@ -1,13 +1,13 @@
 import { styled } from '@mui/material';
 import { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import StyledButtonVariation from '../../components/StyledButtonVariation';
-import Gallery from './GalleryImages';
+import StyledButtonVariation from 'components/StyledButtonVariation';
+import sliders from 'fake-db/sliders';
+import { openDialog } from 'store/modalSlice';
+import PopUpMassage from 'main/massage-cards/PopUpMassage';
+import massages from 'fake-db/massages';
 import Pagination from './Pagination';
-import sliders from '../../fake-db/sliders';
-import { openDialog } from '../../store/modalSlice';
-import PopUpMassage from '../list-of-spa/PopUpMassage';
-import massages from '../../fake-db/massages';
+import Gallery from './GalleryImages';
 
 const HeaderTextGallery = styled('h1')({
   zIndex: '2',

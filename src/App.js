@@ -2,7 +2,7 @@ import { Provider } from 'react-redux';
 import Header from './main/layout/header';
 import WrapperContainer from './WrapperContainer';
 import GallerySliderBlock from './main/sliders-block';
-import SpaServicesPage from './main/list-of-spa';
+import SpaServicesPage from './main/massage-cards';
 import GiftCertificates from './main/gift-certificate';
 import Index from './main/therapists';
 import Instagram from './main/instagram/Instagram';

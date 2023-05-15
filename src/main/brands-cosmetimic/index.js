@@ -1,7 +1,7 @@
-import PageTitle from '../../components/PageTitle';
-import DashWithSubheadings from '../../components/DashWithSubHeadings';
+import PageTitle from 'components/PageTitle';
+import DashWithSubheadings from 'components/DashWithSubHeadings';
+import MarginWrapper from 'components/MarginWrapper';
 import BrandGrid from './BrandGrid';
-import MarginWrapper from '../../components/MarginWrapper';
 
 const Brandes = () => {
   return (

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { styled } from '@mui/material';
-import { closeDialog } from '../store/modalSlice';
+import { closeDialog } from 'store/modalSlice';
 
 const DimmedBackGround = styled('div')({
   backgroundColor: 'rgba(14, 13, 13, 0.96)',

@@ -1,11 +1,11 @@
 import { styled } from '@mui/material';
+import IconBonusPlus from 'icons/IconBonus_Point';
+import IconMassage from 'icons/IconMassage';
+import IconCream from 'icons/IconCream';
+import IconCoffeeCup from 'icons/IconCoffeeCup';
+import PageTitle from 'components/PageTitle';
+import MarginWrapper from 'components/MarginWrapper';
 import CirclesAboutSpa from './CirclesAboutSpa';
-import IconBonusPlus from '../../icons/IconBonus_Point';
-import IconMassage from '../../icons/IconMassage';
-import IconCream from '../../icons/IconCream';
-import IconCoffeeCup from '../../icons/IconCoffeeCup';
-import PageTitle from '../../components/PageTitle';
-import MarginWrapper from '../../components/MarginWrapper';
 
 const Description = styled('div')({
   color: 'white',

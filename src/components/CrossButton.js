@@ -1,6 +1,6 @@
 import { IconButton, styled } from '@mui/material';
 import { useDispatch } from 'react-redux';
-import { closeDialog } from '../store/modalSlice';
+import { closeDialog } from 'store/modalSlice';
 
 const CrossIconButton = styled(IconButton)({
   backgroundColor: 'none',

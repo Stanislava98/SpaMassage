@@ -4,10 +4,10 @@ import InputMask from 'react-input-mask';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import InputFieldSelectDelivery from './InputFieldSelectDelivery';
-import ValidationNamePhone from '../../components/ValidationNamePhone';
-import { closeDialog, openDialog } from '../../store/modalSlice';
-import PopUpGradient from '../../components/PopUpGradient';
-import StyledButtonVariation from '../../components/StyledButtonVariation';
+import ValidationNamePhone from 'components/ValidationNamePhone';
+import { closeDialog, openDialog } from 'store/modalSlice';
+import PopUpGradient from 'components/PopUpGradient';
+import StyledButtonVariation from 'components/StyledButtonVariation';
 
 const InputFieldNamePhone = ({ callback }) => {
   const dispatch = useDispatch();

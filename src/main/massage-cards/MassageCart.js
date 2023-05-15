@@ -1,7 +1,7 @@
 import { styled } from '@mui/material';
 import { useDispatch } from 'react-redux';
-import StyledButtonVariation from '../../components/StyledButtonVariation';
-import { openDialog } from '../../store/modalSlice';
+import StyledButtonVariation from 'components/StyledButtonVariation';
+import { openDialog } from 'store/modalSlice';
 import PopUpMassage from './PopUpMassage';
 
 const Cart = styled('div')({

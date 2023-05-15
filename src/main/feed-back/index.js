@@ -1,14 +1,14 @@
 import { useDispatch } from 'react-redux';
 import Box from '@mui/material/Box';
-import reviews from '../../fake-db/reviews';
-import FeedbackCard from './FeedbackCard';
-import CenteredHeader from '../../components/CenteredHeader';
-import DashWithSubheadings from '../../components/DashWithSubHeadings';
-import PageTitle from '../../components/PageTitle';
-import StyledButtonVariation from '../../components/StyledButtonVariation';
-import { openDialog } from '../../store/modalSlice';
+import reviews from 'fake-db/reviews';
+import CenteredHeader from 'components/CenteredHeader';
+import DashWithSubheadings from 'components/DashWithSubHeadings';
+import PageTitle from 'components/PageTitle';
+import StyledButtonVariation from 'components/StyledButtonVariation';
+import { openDialog } from 'store/modalSlice';
+import MarginWrapper from 'components/MarginWrapper';
 import PopUpFeedback from './PopUpFeedback';
-import MarginWrapper from '../../components/MarginWrapper';
+import FeedbackCard from './FeedbackCard';
 
 const FeedBack = () => {
   const dispatch = useDispatch();

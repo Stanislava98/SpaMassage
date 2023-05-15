@@ -1,4 +1,4 @@
- import { styled } from '@mui/material';
+import { styled } from '@mui/material';
 
 const Circle = styled('div')({
   display: 'flex',
@@ -24,9 +24,9 @@ const Circle = styled('div')({
 
 const CirclesAboutSpa = ({ text, icon, margin = 0 }) => {
   return (
-    <div style={{ marginLeft: `-${margin}px`}}>
+    <div style={{ marginLeft: `-${margin}px` }}>
       <Circle>
-        <div className="CircleWithIcon">
+        <div className='CircleWithIcon'>
           {icon}
           <div>{text}</div>
         </div>

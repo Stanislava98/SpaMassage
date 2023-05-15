@@ -2,10 +2,10 @@ import { TextField, styled } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import Box from '@mui/material/Box';
-import Validation from '../../components/Validation';
-import StyledButtonVariation from '../../components/StyledButtonVariation';
-import PopUpGradient from '../../components/PopUpGradient';
-import { closeDialog, openDialog } from '../../store/modalSlice';
+import Validation from 'components/Validation';
+import StyledButtonVariation from 'components/StyledButtonVariation';
+import PopUpGradient from 'components/PopUpGradient';
+import { closeDialog, openDialog } from 'store/modalSlice';
 
 const InputField = styled(TextField)({
   background: '#232020',

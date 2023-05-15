@@ -1,7 +1,7 @@
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import massages from 'fake-db/massages';
 import MassageCart from './MassageCart';
-import massages from '../../fake-db/massages';
 
 const MassageListInformation = () => {
   return (

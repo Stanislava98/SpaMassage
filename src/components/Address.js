@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import GPS from '../icons/footericon/GPS';
+import GPS from 'icons/footer-icon/GPS';
 
 const IconWithText = styled('div')({
   display: 'flex',

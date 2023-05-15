@@ -1,9 +1,9 @@
-import {styled} from '@mui/material';
+import { styled } from '@mui/material';
 import { useState } from 'react';
 import Rating from '@mui/material/Rating';
-import SmallTitleDescription from '../../components/SmallTitleDescription';
-import CrossButton from '../../components/CrossButton';
-import IconCross from '../../icons/IconCross';
+import SmallTitleDescription from 'components/SmallTitleDescription';
+import CrossButton from 'components/CrossButton';
+import IconCross from 'icons/IconCross';
 import FeedbackForm from './FeedbackForm';
 
 const StyledRating = styled(Rating)({

@@ -1,9 +1,9 @@
 import AppBar from '@mui/material/AppBar';
 import { styled } from '@mui/material';
 import { Link } from 'react-scroll';
-import SpaRelaxIcon from '../../logo/SpaRelaxIcon';
+import MenuBar from 'components/MenuBar';
+import SpaRelaxIcon from './logo/SpaRelaxIcon';
 import ChangeLanguages from './ChangeLanguages';
-import MenuBar from '../../../components/MenuBar';
 
 const StyledAppBar = styled(AppBar)({
   backgroundColor: '#1F1D1D',

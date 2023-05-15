@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import HorizontalBar from '../icons/HorizontalBar';
+import HorizontalBar from 'icons/HorizontalBar';
 
 const SubHeading = styled('div')({
   color: 'white',

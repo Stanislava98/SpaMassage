@@ -1,16 +1,16 @@
 import Divider from '@mui/material/Divider';
-import {styled} from '@mui/material';
-import {Link} from 'react-scroll';
-import DashWithSubheadings from '../../../components/DashWithSubHeadings';
-import PageTitle from '../../../components/PageTitle';
-import IconTelegram from '../../../icons/footericon/IconTelegram';
-import IconFacebook from '../../../icons/footericon/IconFacebook';
-import IconInstagram from '../../../icons/footericon/IconInstagram';
-import MenuBar from '../../../components/MenuBar';
-import IconVisa from '../../../icons/footericon/IconVisa';
-import IconMasterCard from '../../../icons/footericon/IconMasterCard';
-import Address from '../../../components/Address';
-import PhoneNumber from '../../../components/PhoneNumber';
+import { styled } from '@mui/material';
+import { Link } from 'react-scroll';
+import DashWithSubheadings from 'components/DashWithSubHeadings';
+import PageTitle from 'components/PageTitle';
+import IconTelegram from 'icons/footer-icon/IconTelegram';
+import IconFacebook from 'icons/footer-icon/IconFacebook';
+import IconInstagram from 'icons/footer-icon/IconInstagram';
+import MenuBar from 'components/MenuBar';
+import IconVisa from 'icons/footer-icon/IconVisa';
+import IconMasterCard from 'icons/footer-icon/IconMasterCard';
+import Address from 'components/Address';
+import PhoneNumber from 'components/PhoneNumber';
 
 const Text = styled('div')({
   textTransform: 'uppercase',
@@ -34,36 +34,36 @@ const FooterInformation = () => {
       </div>
 
       <BlockTextIcons>
-        <div style={{display: 'flex', gap: '30px'}}>
-          <Address/>
-          <PhoneNumber/>
+        <div style={{ display: 'flex', gap: '30px' }}>
+          <Address />
+          <PhoneNumber />
 
-          <Text style={{display: 'flex', alignItems: 'center'}}>ежедневно с 09:00 до 21:00</Text>
+          <Text style={{ display: 'flex', alignItems: 'center' }}>ежедневно с 09:00 до 21:00</Text>
         </div>
 
-        <div style={{gap: '20px', display: 'flex'}}>
+        <div style={{ gap: '20px', display: 'flex' }}>
           <a
-            style={{textDecoration: 'none'}}
+            style={{ textDecoration: 'none' }}
             href="https://www.instagram.com/atamanuikstanislava/"
             target="_blank"
             rel="noreferrer"
           >
-            <IconInstagram/>
+            <IconInstagram />
           </a>
           <a
-            style={{textDecoration: 'none'}}
+            style={{ textDecoration: 'none' }}
             href="https://www.facebook.com/stanislava.sheptitskaya.3/"
             target="_blank"
             rel="noreferrer"
           >
-            <IconFacebook/>
+            <IconFacebook />
           </a>
           <a href="https://t.me/Slava98890" target="_blank" rel="noreferrer">
-            <IconTelegram/>
+            <IconTelegram />
           </a>
         </div>
       </BlockTextIcons>
-      <Divider style={{minWidth: '100%', border: '1px solid #795348', marginTop: '20px'}}/>
+      <Divider style={{ minWidth: '100%', border: '1px solid #795348', marginTop: '20px' }} />
 
       <BlockTextIcons>
         <MenuBar>
@@ -83,9 +83,9 @@ const FooterInformation = () => {
             отзывы
           </Link>
         </MenuBar>
-        <div style={{gap: '20px', display: 'flex', alignItems: 'center'}}>
-          <IconVisa/>
-          <IconMasterCard/>
+        <div style={{ gap: '20px', display: 'flex', alignItems: 'center' }}>
+          <IconVisa />
+          <IconMasterCard />
         </div>
       </BlockTextIcons>
 

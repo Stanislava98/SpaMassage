@@ -1,8 +1,8 @@
 import { styled } from '@mui/material';
 import { useDispatch } from 'react-redux';
-import PageTitle from '../../components/PageTitle';
-import StyledButtonVariation from '../../components/StyledButtonVariation';
-import { openDialog } from '../../store/modalSlice';
+import PageTitle from 'components/PageTitle';
+import StyledButtonVariation from 'components/StyledButtonVariation';
+import { openDialog } from 'store/modalSlice';
 import PopUpBuyCertificate from './PopUpBuyCertificate';
 
 const Description = styled('div')({

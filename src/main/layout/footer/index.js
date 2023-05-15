@@ -1,5 +1,5 @@
+import WrapperContainer from 'WrapperContainer';
 import Gradient from './Gradient';
-import WrapperContainer from '../../../WrapperContainer';
 import FooterInformation from './FooterInformation';
 
 const Footer = () => {

@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import IconPhoneCall from '../icons/footericon/IconPhoneCall';
+import IconPhoneCall from 'icons/footer-icon/IconPhoneCall';
 
 const IconWithText = styled('div')({
   display: 'flex',

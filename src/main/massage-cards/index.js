@@ -1,8 +1,8 @@
+import PageTitle from 'components/PageTitle';
+import DashWithSubheadings from 'components/DashWithSubHeadings';
+import MarginWrapper from 'components/MarginWrapper';
+import CenteredHeader from 'components/CenteredHeader';
 import MassageListInformation from './MassageListInformation';
-import PageTitle from '../../components/PageTitle';
-import DashWithSubheadings from '../../components/DashWithSubHeadings';
-import MarginWrapper from '../../components/MarginWrapper';
-import CenteredHeader from '../../components/CenteredHeader';
 
 const SpaServicesPage = () => {
   return (

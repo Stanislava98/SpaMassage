@@ -1,6 +1,6 @@
 import { styled } from '@mui/material';
-import ArrowRightIcon from '../../icons/ArrowRightIcon';
-import IconArrowLeft from '../../icons/ArrowLeft';
+import ArrowRightIcon from 'icons/ArrowRightIcon';
+import IconArrowLeft from 'icons/ArrowLeft';
 
 const Root = styled('div')({
   display: 'flex',

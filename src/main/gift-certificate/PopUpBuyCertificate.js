@@ -1,8 +1,8 @@
 import { styled } from '@mui/material';
 import { useState } from 'react';
-import SmallTitleDescription from '../../components/SmallTitleDescription';
-import CrossButton from '../../components/CrossButton';
-import IconCross from '../../icons/IconCross';
+import SmallTitleDescription from 'components/SmallTitleDescription';
+import CrossButton from 'components/CrossButton';
+import IconCross from 'icons/IconCross';
 import InputFieldNamePhone from './InputFieldNamePhone';
 
 const Rectangle = styled('div')({

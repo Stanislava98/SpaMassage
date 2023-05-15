@@ -1,6 +1,6 @@
 import { styled } from '@mui/material';
+import IconCross from 'icons/IconCross';
 import CrossButton from './CrossButton';
-import IconCross from '../icons/IconCross';
 import SmallTitleDescription from './SmallTitleDescription';
 
 const Rectangle = styled('div')({

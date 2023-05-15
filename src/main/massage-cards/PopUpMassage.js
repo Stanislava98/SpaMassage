@@ -1,15 +1,14 @@
 import { styled } from '@mui/material';
-import {useDispatch} from "react-redux";
-import CrossButton from '../../components/CrossButton';
-import IconCross from '../../icons/IconCross';
+import { useDispatch } from 'react-redux';
+import CrossButton from 'components/CrossButton';
+import IconCross from 'icons/IconCross';
+import StyledButtonVariation from 'components/StyledButtonVariation';
+import PopUpRectangle from 'components/PopUpRectangle';
+import { closeDialog, openDialog } from 'store/modalSlice';
 import SelectOils from './SelectOils';
 import TimeSelect from './TimeSelect';
 import Accordions from './Accordions';
-import StyledButtonVariation from '../../components/StyledButtonVariation';
-import PopUpRectangle from '../../components/PopUpRectangle';
-import {closeDialog, openDialog} from "../../store/modalSlice";
-import PopUpBookMassage from "./PopUpBookMassage";
-
+import PopUpBookMassage from './PopUpBookMassage';
 
 const TitleOfCart = styled('div')({
   color: 'white',
@@ -35,7 +34,7 @@ const PopUpMassage = ({ details }) => {
   const handleClick = () => {
     dispatch(closeDialog());
     dispatch(openDialog(<PopUpBookMassage details={details} />));
-  }
+  };
 
   return (
     <PopUpRectangle>
@@ -86,13 +85,11 @@ const PopUpMassage = ({ details }) => {
                 secondQuestion={details.secondQuestion}
                 secondAnswer={details.secondAnswer}
               />
-              <div style={{bottom: '0', position: 'absolute'}}>
-                <StyledButtonVariation variant="contained" onClick={handleClick}
-                >
+              <div style={{ bottom: '0', position: 'absolute' }}>
+                <StyledButtonVariation variant="contained" onClick={handleClick}>
                   заказать услугу
                 </StyledButtonVariation>
               </div>
-
             </div>
           </div>
         </div>
