@@ -20,7 +20,7 @@ const TitleDetails = styled('div')(({ color }) => ({
     textDecoration: 'none',
   },
   'a:hover': {
-    color: `${colors.orangeOnHover}`,
+    color: colors.orangeOnHover,
   },
 }));
 

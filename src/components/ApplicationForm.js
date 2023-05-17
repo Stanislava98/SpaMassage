@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import StyledButtonVariation from './StyledButtonVariation';
 import { closeDialog, openDialog } from '../store/modalSlice';
 import PopUpGradient from './PopUpGradient';
-import ValidationNamePhone from './ValidationNamePhone';
+import validationNamePhone from './validationNamePhone';
 
 const InputField = styled(TextField)({
   background: '#232020',
@@ -37,7 +37,7 @@ const InputField = styled(TextField)({
   },
 });
 
-const ApplicationForm = ({ buttonLabel, callback }) => {
+const ApplicationForm = ({ buttonLabel, cbHandleSucceed }) => {
   const dispatch = useDispatch();
 
   const [name, setName] = useState('');
@@ -53,7 +53,7 @@ const ApplicationForm = ({ buttonLabel, callback }) => {
   };
 
   const onSubmit = () => {
-    const _errors = ValidationNamePhone({ name, phoneNumber });
+    const _errors = validationNamePhone({ name, phoneNumber });
 
     if (isEmpty(_errors) === false) {
       setErrors(_errors);
@@ -64,15 +64,18 @@ const ApplicationForm = ({ buttonLabel, callback }) => {
     dispatch(closeDialog());
     dispatch(openDialog(<PopUpGradient test="Спасибо, мы свяжемся с Вами в ближайшее время" />));
 
-    callback();
+    cbHandleSucceed();
   };
 
   function isEmpty(obj) {
+    // Object.key return a massive of string
     return Object.keys(obj).length === 0;
   }
 
   const handleNameKeyPress = (event) => {
     const { charCode } = event;
+    // Регулярное выражения, которое проверяет на ввод числа,
+    // если символ число, тогда прервать выполнения ввода.
     if (/\d/.test(String.fromCharCode(charCode))) {
       event.preventDefault();
     }

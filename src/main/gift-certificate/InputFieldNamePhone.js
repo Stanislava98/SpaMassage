@@ -3,11 +3,11 @@ import TextField from '@mui/material/TextField';
 import InputMask from 'react-input-mask';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import InputFieldSelectDelivery from './InputFieldSelectDelivery';
-import ValidationNamePhone from 'components/ValidationNamePhone';
+import validationNamePhone from 'components/validationNamePhone';
 import { closeDialog, openDialog } from 'store/modalSlice';
 import PopUpGradient from 'components/PopUpGradient';
 import StyledButtonVariation from 'components/StyledButtonVariation';
+import InputFieldSelectDelivery from './InputFieldSelectDelivery';
 
 const InputFieldNamePhone = ({ callback }) => {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const InputFieldNamePhone = ({ callback }) => {
   };
 
   const onSubmit = () => {
-    const _errors = ValidationNamePhone({ name, phoneNumber });
+    const _errors = validationNamePhone({ name, phoneNumber });
 
     if (isEmpty(_errors) === false) {
       setErrors(_errors);

@@ -40,7 +40,7 @@ const StyledButton = styled(Button)(({ variant }) => ({
 
 const StyledButtonVariation = (props) => {
   const variation = variants[props.variant ?? 'contained'];
-  return <StyledButton variation={variation} {...props} />;
+  return <StyledButton variant={variation} {...props} />;
 };
 
 StyledButtonVariation.propTypes = {

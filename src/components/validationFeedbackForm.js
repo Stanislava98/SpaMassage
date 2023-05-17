@@ -1,11 +1,11 @@
-const Validation = (values) => {
+const validationFeedbackForm = (values) => {
   const errors = {};
   const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const name = /^[a-zA-Zа-яА-ЯёЁ]+$/u;
   const title = /^[a-zA-Zа-яА-ЯёЁ0-9\s]+$/u;
   const description = /^[a-zA-Zа-яА-ЯёЁ0-9\s]+$/u;
 
-  if(!name.test(values.name)) {
+  if (!name.test(values.name)) {
     errors.name = 'Некорректное имя';
   }
 
@@ -24,11 +24,11 @@ const Validation = (values) => {
     errors.title = 'Не забудьте добавить заголовок';
   }
 
-  if(!description.test(values.validateDescription)){
+  if (!description.test(values.validateDescription)) {
     errors.description = 'Будем рады краткому отзыву';
   }
 
   return errors;
 };
 
-export default Validation;
+export default validationFeedbackForm;

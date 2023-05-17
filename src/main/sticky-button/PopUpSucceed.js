@@ -82,7 +82,7 @@ const PopUpSucceed = () => {
                 gap: '16px',
               }}
             >
-              <ApplicationForm buttonLabel="жду звонка" callback={handleSucceed} />
+              <ApplicationForm buttonLabel="жду звонка" cbHandleSucceed={handleSucceed} />
             </div>
           </BlockTextInputs>
         </BgWrapper>

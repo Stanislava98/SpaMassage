@@ -2,7 +2,7 @@ import { TextField, styled } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import Box from '@mui/material/Box';
-import Validation from 'components/Validation';
+import validationFeedbackForm from 'components/validationFeedbackForm';
 import StyledButtonVariation from 'components/StyledButtonVariation';
 import PopUpGradient from 'components/PopUpGradient';
 import { closeDialog, openDialog } from 'store/modalSlice';
@@ -63,7 +63,12 @@ const FeedbackForm = ({ buttonLabel }) => {
   };
 
   const onSubmit = () => {
-    const _errors = Validation({ name, validateEmail, validateTitle, validateDescription });
+    const _errors = validationFeedbackForm({
+      name,
+      validateEmail,
+      validateTitle,
+      validateDescription,
+    });
     if (isEmpty(_errors) === false) {
       setErrors(_errors);
       return;

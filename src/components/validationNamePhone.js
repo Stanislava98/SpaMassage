@@ -1,4 +1,4 @@
-const ValidationNamePhone = (values) => {
+const validationNamePhone = (values) => {
   const errors = {};
   const phone = /^\+38\(\d{3}\) \d{3}-\d{2}-\d{2}$/;
   const nameField = /^[a-zA-Zа-яА-ЯёЁ]+$/u;
@@ -18,4 +18,4 @@ const ValidationNamePhone = (values) => {
   return errors;
 };
 
-export default ValidationNamePhone;
+export default validationNamePhone;
