@@ -28,12 +28,7 @@ const AccordionDetails = styled(MuiAccordionDetails)({
   backgroundColor: 'transparent',
 });
 
-export default function Accordions({
-  firstQuestion,
-  firstAnswer,
-  secondQuestion,
-  secondAnswer,
-}) {
+export default function Accordions({ firstQuestion, firstAnswer, secondQuestion, secondAnswer }) {
   const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = (panel) => (event, newExpanded) => {

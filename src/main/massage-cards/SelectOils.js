@@ -33,8 +33,6 @@ const SelectOils = ({ details }) => {
     details.selectedOils = value.join(', ');
     setOilName(typeof value === 'string' ? value.split(',') : value);
   };
-
-
   return (
     <div>
       <FormControl

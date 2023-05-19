@@ -126,7 +126,11 @@ const PopUpBookMassage = ({ details }) => {
             gap: '16px',
           }}
         >
-          <ApplicationForm className="row-form" buttonLabel="подтвердить" callback={handleSucceed} />
+          <ApplicationForm
+            className="row-form"
+            buttonLabel="подтвердить"
+            cbHandleSucceed={handleSucceed}
+          />
         </div>
         <div style={{ textAlign: 'center', marginTop: '24px', marginBottom: '0', color: 'white' }}>
           <span>
