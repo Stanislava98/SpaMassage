@@ -1,5 +1,4 @@
 import { styled } from '@mui/material';
-import { useState } from 'react';
 import SmallTitleDescription from 'components/SmallTitleDescription';
 import CrossButton from 'components/CrossButton';
 import IconCross from 'icons/IconCross';
@@ -24,7 +23,6 @@ const BgWrapper = styled('div')({
 });
 
 const PopUpBuyCertificate = () => {
-
   return (
     <Rectangle>
       <BgWrapper>

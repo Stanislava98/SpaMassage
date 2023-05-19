@@ -35,7 +35,6 @@ const InputFieldNamePhone = () => {
 
     dispatch(closeDialog());
     dispatch(openDialog(<PopUpGradient test="Спасибо, мы свяжемся с Вами в ближайшее время" />));
-
   };
 
   function isEmpty(obj) {
