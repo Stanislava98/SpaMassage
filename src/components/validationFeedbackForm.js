@@ -27,7 +27,6 @@ const validationFeedbackForm = (values) => {
   if (!description.test(values.validateDescription)) {
     errors.description = 'Будем рады краткому отзыву';
   }
-
   return errors;
 };
 

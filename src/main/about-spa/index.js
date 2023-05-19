@@ -41,7 +41,7 @@ const AboutSpa = () => {
   return (
     <MarginWrapper>
       <PageTitle>вкратце о салоне</PageTitle>
-      <div id='about' style={{ display: 'flex' }}>
+      <div id="about" style={{ display: 'flex' }}>
         <PageTitle color="orange">spa relax</PageTitle>
         <Description>
           Погрузитесь в мир СПА от нашего салона — и ваш разум, тело и дух испытают фантастические

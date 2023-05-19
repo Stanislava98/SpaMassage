@@ -69,7 +69,7 @@ const PopUpFeedback = () => {
             zIndex: 105,
             marginTop: '50px',
             marginBottom: '40px',
-            textAlign: 'center'
+            textAlign: 'center',
           }}
         >
           <SmallTitleDescription>Будем благодарны отзыву</SmallTitleDescription>

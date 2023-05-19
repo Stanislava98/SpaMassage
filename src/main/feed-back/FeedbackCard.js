@@ -21,7 +21,7 @@ const TitleInRectangle = styled('div')({
   fontWeight: 'bold',
   height: '45px',
   display: 'flex',
-  alignItems: 'center'
+  alignItems: 'center',
 });
 
 const Information = styled('div')({
@@ -46,10 +46,10 @@ const FeedbackCard = ({ review }) => {
       <Rectangle>
         <Information>
           <TitleInRectangle>{review.title}</TitleInRectangle>
-          <div style={{height: '24px', display: 'flex', alignItems: 'center', marginTop: '10px'}}>
+          <div style={{ height: '24px', display: 'flex', alignItems: 'center', marginTop: '10px' }}>
             <Rating name="read-only" value={4} size="small" readOnly />
           </div>
-          <div style={{height: '230px', marginTop: '10px'}}>{review.description}</div>
+          <div style={{ height: '230px', marginTop: '10px' }}>{review.description}</div>
           <DataName>
             <div>{review.name}</div>
             <div>{review.date}</div>

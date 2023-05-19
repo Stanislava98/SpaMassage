@@ -20,9 +20,9 @@ const Rectangle = styled('div')(({ radius }) => ({
   boxSizing: 'border-box',
 }));
 
-const BrandRectangle = (props) => {
-  const imageName = props.image;
-  const radius = variants[props.variant ?? 'circle'];
+const BrandRectangle = ({ image, variant }) => {
+  const imageName = image;
+  const radius = variants[variant ?? 'circle'];
 
   return (
     <Rectangle radius={radius}>

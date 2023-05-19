@@ -26,7 +26,7 @@ const CirclesAboutSpa = ({ text, icon, margin = 0 }) => {
   return (
     <div style={{ marginLeft: `-${margin}px` }}>
       <Circle>
-        <div className='CircleWithIcon'>
+        <div className="CircleWithIcon">
           {icon}
           <div>{text}</div>
         </div>

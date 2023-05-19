@@ -9,7 +9,7 @@ import PopUpGradient from 'components/PopUpGradient';
 import StyledButtonVariation from 'components/StyledButtonVariation';
 import InputFieldSelectDelivery from './InputFieldSelectDelivery';
 
-const InputFieldNamePhone = ({ callback }) => {
+const InputFieldNamePhone = () => {
   const dispatch = useDispatch();
 
   const [name, setName] = useState('');
@@ -36,7 +36,6 @@ const InputFieldNamePhone = ({ callback }) => {
     dispatch(closeDialog());
     dispatch(openDialog(<PopUpGradient test="Спасибо, мы свяжемся с Вами в ближайшее время" />));
 
-    callback();
   };
 
   function isEmpty(obj) {

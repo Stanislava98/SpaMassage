@@ -24,11 +24,6 @@ const BgWrapper = styled('div')({
 });
 
 const PopUpBuyCertificate = () => {
-  const [succeed, setSucceed] = useState(false);
-
-  function handleSucceed() {
-    setSucceed(true);
-  }
 
   return (
     <Rectangle>
@@ -89,7 +84,7 @@ const PopUpBuyCertificate = () => {
               </div>
             </SmallTitleDescription>
           </div>
-          <InputFieldNamePhone callback={handleSucceed} />
+          <InputFieldNamePhone />
         </div>
       </BgWrapper>
     </Rectangle>

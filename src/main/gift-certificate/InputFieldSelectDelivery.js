@@ -11,8 +11,7 @@ const InputFieldSelectDelivery = () => {
           <InputLabel variant="standard" htmlFor="uncontrolled-native">
             Тип доставки
           </InputLabel>
-          <NativeSelect
-          >
+          <NativeSelect>
             <option>Доставка курьером</option>
             <option>Получить в салоне</option>
             <option>Элетронный сертификат</option>
