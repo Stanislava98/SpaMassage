@@ -28,12 +28,12 @@ const Instagram = () => {
         </PageTitle>
       </CenteredHeader>
       <PicturesBlock>
-        <img src="img/Insta/1.png" />
-        <img src="img/Insta/2.png" />
-        <img src="img/Insta/3.png" />
-        <img src="img/Insta/4.png" />
-        <img src="img/Insta/5.png" />
-        <img src="img/Insta/6.png" />
+        <img src="img/Insta/1.png" alt="Woman-Back" />
+        <img src="img/Insta/2.png" alt="Women-Laughing" />
+        <img src="img/Insta/3.png" alt="Coconut" />
+        <img src="img/Insta/4.png" alt="Talking women" />
+        <img src="img/Insta/5.png" alt="Back-Massage" />
+        <img src="img/Insta/6.png" alt="Back" />
       </PicturesBlock>
     </MarginWrapper>
   );
