@@ -53,12 +53,6 @@ const BlockTextInputs = styled('div')({
 });
 
 const PopUpSucceed = () => {
-  const [succeed, setSucceed] = useState(false);
-
-  function handleSucceed() {
-    setSucceed(true);
-  }
-
   return (
     <>
       <Rectangle>
@@ -82,7 +76,7 @@ const PopUpSucceed = () => {
                 gap: '16px',
               }}
             >
-              <ApplicationForm buttonLabel="жду звонка" cbHandleSucceed={handleSucceed} />
+              <ApplicationForm buttonLabel="жду звонка" />
             </div>
           </BlockTextInputs>
         </BgWrapper>

@@ -27,12 +27,6 @@ const PriceCart = styled('div')({
 });
 
 const PopUpBookMassage = ({ details }) => {
-  const [succeed, setSucceed] = useState(false);
-
-  function handleSucceed() {
-    setSucceed(true);
-  }
-
   return (
     <PopUpRectangle>
       <div
@@ -129,7 +123,6 @@ const PopUpBookMassage = ({ details }) => {
           <ApplicationForm
             className="row-form"
             buttonLabel="подтвердить"
-            cbHandleSucceed={handleSucceed}
           />
         </div>
         <div style={{ textAlign: 'center', marginTop: '24px', marginBottom: '0', color: 'white' }}>

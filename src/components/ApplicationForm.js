@@ -37,7 +37,7 @@ const InputField = styled(TextField)({
   },
 });
 
-const ApplicationForm = ({ buttonLabel, cbHandleSucceed }) => {
+const ApplicationForm = ({ buttonLabel }) => {
   const dispatch = useDispatch();
 
   const [name, setName] = useState('');
@@ -64,7 +64,6 @@ const ApplicationForm = ({ buttonLabel, cbHandleSucceed }) => {
     dispatch(closeDialog());
     dispatch(openDialog(<PopUpGradient test="Спасибо, мы свяжемся с Вами в ближайшее время" />));
 
-    cbHandleSucceed();
   };
 
   function isEmpty(obj) {
