@@ -44,14 +44,11 @@ const GallerySliderBlock = () => {
   const [slider, setSlider] = useState(sliders[index.current]);
 
   const handleClick = () => {
-    const retrieveCards = () => {
-      const firstCard = massages[1];
-      const secondCard = massages[3];
-      const thirdCard = massages[8];
-      return [firstCard, secondCard, thirdCard];
-    };
+    const firstCard = massages[1];
+    const secondCard = massages[3];
+    const thirdCard = massages[8];
 
-    const sliderCards = retrieveCards();
+    const sliderCards = [firstCard, secondCard, thirdCard];
 
     dispatch(openDialog(<PopUpMassage details={sliderCards[index.current]} />));
   };
