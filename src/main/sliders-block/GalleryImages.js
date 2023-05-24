@@ -7,13 +7,19 @@ const Root = styled('div')({
       maxHeight: '100%',
     },
   },
+  '@media (min-width: 1920px)': {
+    '.image-slider': {
+      width: '800px',
+      height: '800px',
+    },
+  },
 });
 
 const GalleryImages = ({ image }) => {
   return (
     <Root>
-      <div id="main" className="fill">
-        <img src={image} alt="" />
+      <div id='main' className='fill'>
+        <img className='image-slider' src={image} alt='' />
       </div>
     </Root>
   );

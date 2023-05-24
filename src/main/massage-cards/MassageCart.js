@@ -47,23 +47,23 @@ const MassageCart = ({ massage }) => {
 
   return (
     <Cart>
-      <div>
-        <img src={massage.img} style={{ maxWidth: '100%' }} />
-        <div
-          style={{
-            height: '168px',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-          }}
-        >
-          <TitleAndPrice>
-            <TitleOfCart>{massage.title}</TitleOfCart>
-            <PriceCart>{massage.price}</PriceCart>
-          </TitleAndPrice>
-          <Description>{massage.text}</Description>
-          <StyledButtonVariation onClick={handleClick} variant="outlined">записаться</StyledButtonVariation>
-        </div>
+      <img className="image-massage-cart" src={massage.img} style={{ maxWidth: '100%' }} />
+      <div
+        style={{
+          height: '168px',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+        }}
+      >
+        <TitleAndPrice>
+          <TitleOfCart>{massage.title}</TitleOfCart>
+          <PriceCart>{massage.price}</PriceCart>
+        </TitleAndPrice>
+        <Description>{massage.text}</Description>
+        <StyledButtonVariation onClick={handleClick} variant="outlined">
+          записаться
+        </StyledButtonVariation>
       </div>
     </Cart>
   );

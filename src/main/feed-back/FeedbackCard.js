@@ -14,6 +14,10 @@ const Rectangle = styled('div')({
   display: 'flex',
   color: 'white',
   boxSizing: 'border-box',
+  '@media (min-width: 1920px)': {
+    width: '364px',
+    height: '364px',
+  },
 });
 
 const TitleInRectangle = styled('div')({

@@ -5,9 +5,9 @@ import MassageCart from './MassageCart';
 
 const MassageListInformation = () => {
   return (
-    <ImageList cols={3} gap={34} style={{ marginTop: '30px' }}>
+    <ImageList style={{ marginTop: '30px', display: 'flex', flexWrap: 'wrap', gap: '34px' }}>
       {massages.map((item, index) => (
-        <ImageListItem key={index}>
+        <ImageListItem key={index} className="massage-cart">
           <MassageCart massage={item} />
         </ImageListItem>
       ))}

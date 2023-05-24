@@ -1,6 +1,10 @@
 import { styled } from '@mui/material';
 
 const Circle = styled('div')({
+  '@media (min-width: 1920px)': {
+    width: '397px',
+    height: '397px',
+  },
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -10,6 +14,10 @@ const Circle = styled('div')({
   border: '1px solid white',
   boxSizing: 'border-box',
   '& .CircleWithIcon': {
+    '@media (min-width: 1920px)': {
+      fontSize: '18px',
+      width: '200px'
+    },
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',

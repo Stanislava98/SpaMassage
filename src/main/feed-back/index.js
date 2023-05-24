@@ -28,7 +28,7 @@ const FeedBack = () => {
       </CenteredHeader>
       <div id="feedback" />
       <Box
-        style={{ display: 'flex', gap: '34px', justifyContent: 'center' }}
+        style={{ display: 'flex', columnGap: '34px', justifyContent: 'center', flexWrap: 'wrap' }}
         sx={{
           '& > legend': { mt: 2 },
         }}

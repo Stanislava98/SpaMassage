@@ -12,6 +12,10 @@ const Description = styled('div')({
   margin: '0',
   marginLeft: '30px',
   lineHeight: '140%',
+  '@media (min-width: 1920px)': {
+    width: '45%',
+    marginTop: '7px',
+  },
 });
 
 const AboutSpa = () => {
@@ -43,7 +47,7 @@ const AboutSpa = () => {
       <PageTitle>вкратце о салоне</PageTitle>
       <div id="about" style={{ display: 'flex' }}>
         <PageTitle color="orange">spa relax</PageTitle>
-        <Description>
+        <Description className="description-about-spa">
           Погрузитесь в мир СПА от нашего салона — и ваш разум, тело и дух испытают фантастические
           новые ощущения. В изысканной комбинации от природы островов.
         </Description>

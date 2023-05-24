@@ -5,6 +5,16 @@ import StyledButtonVariation from 'components/StyledButtonVariation';
 import { openDialog } from 'store/modalSlice';
 import PopUpBuyCertificate from './PopUpBuyCertificate';
 
+const BlockImageCertificate = styled('div')({
+  paddingLeft: '574px',
+  position: 'absolute',
+  paddingTop: '60px',
+  '@media (min-width: 1920px)': {
+    paddingLeft: '774px',
+    paddingTop: '20px',
+  },
+});
+
 const Description = styled('div')({
   color: 'white',
   width: '45%',
@@ -20,13 +30,18 @@ const InformationAboutCertificates = () => {
 
   return (
     <div id="certificates">
-      <img
-        style={{ position: 'absolute', marginLeft: '570px', paddingTop: '60px' }}
-        src="img/certificates1.png"
-        alt=""
-      />
+      <BlockImageCertificate>
+        <img
+          className="image-certificate"
+          src="img/certificates1.png"
+          alt=""
+        />
+      </BlockImageCertificate>
       <div style={{ paddingTop: '100px', paddingBottom: '100px' }}>
-        <PageTitle>подарочные сертификаты</PageTitle>
+        <PageTitle>
+          подарочные <br />
+          сертификаты
+        </PageTitle>
         <Description>
           Необычный и эксклюзивный подарок, который даёт прекрасную возможность подарить своим
           любимым в честь праздника, а также друзьям или родственникам, даже бизнес партнёрам нечто

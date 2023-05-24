@@ -9,6 +9,13 @@ import massages from 'fake-db/massages';
 import Pagination from './Pagination';
 import Gallery from './GalleryImages';
 
+const LeftBlockInformation = styled('div')({
+  paddingTop: '90px',
+  '@media (min-width: 1920px)': {
+    paddingTop: '150px',
+  },
+});
+
 const HeaderTextGallery = styled('h1')({
   zIndex: '2',
   position: 'absolute',
@@ -76,8 +83,8 @@ const GallerySliderBlock = () => {
   };
 
   return (
-    <div style={{ display: 'flex' }} className="firstBlock">
-      <div style={{ paddingTop: '90px' }}>
+    <div style={{ display: 'flex', justifyContent: 'space-between' }} className="firstBlock">
+      <LeftBlockInformation>
         <HeaderTextGallery>{slider.title}</HeaderTextGallery>
         <DescriptionTextGallery>
           <p>{slider.description}</p>
@@ -93,7 +100,7 @@ const GallerySliderBlock = () => {
             nextPage={forward.current}
           />
         </DescriptionTextGallery>
-      </div>
+      </LeftBlockInformation>
       <Gallery image={slider.img} />
     </div>
   );

@@ -18,6 +18,10 @@ const Rectangle = styled('div')(({ radius }) => ({
   justifyContent: 'center',
   alignItems: 'center',
   boxSizing: 'border-box',
+  '@media (min-width: 1920px)': {
+    width: '364px',
+    height: '364px',
+  },
 }));
 
 const BrandRectangle = ({ image, variant }) => {

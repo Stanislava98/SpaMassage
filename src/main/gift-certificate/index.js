@@ -6,6 +6,9 @@ import InformationAboutCertificates from './InformationAboutCertificates';
 const Root = styled('div')({
   backgroundColor: '#1C1A1A',
   position: 'relative',
+  '@media (min-width: 1920px)': {
+    height: '600px',
+  },
 });
 
 const GiftCertificates = () => {

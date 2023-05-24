@@ -4,3 +4,21 @@ body {
     font-family: Raleway, serif;
     font-feature-settings: "lnum";
 }
+
+@media (min-width: 1920px) {
+    .increasing-icon {
+        width: 90px;
+        height: 90px;
+    }
+    .image-therapists {
+        width: 365px;
+        height: 550px;
+    }
+    .image-certificate {
+        height: 650px;
+        width: 750px;
+    }
+    .massage-cart {
+        width: 364px;
+    }
+}

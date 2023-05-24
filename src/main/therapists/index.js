@@ -9,7 +9,7 @@ const BlockWithMassageTherapists = () => {
     <MarginWrapper>
       <CenteredHeader>
         <DashWithSubheadings>Их умения творят настоящие чудеса</DashWithSubheadings>
-        <PageTitle>сертифицированные массажисты</PageTitle>
+        <PageTitle>сертифицированные <br/>массажисты</PageTitle>
       </CenteredHeader>
       <TherapistList />
     </MarginWrapper>
