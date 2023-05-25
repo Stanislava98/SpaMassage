@@ -21,4 +21,19 @@ body {
     .massage-cart {
         width: 364px;
     }
+    .col-sm {
+        width: 100%;
+    }
+
+    .col-md {
+        width: 50%;
+    }
+
+    .col-lg {
+        width: 33.33%;
+    }
+
+    .col-xl {
+        width: 70%;
+    }
 }
