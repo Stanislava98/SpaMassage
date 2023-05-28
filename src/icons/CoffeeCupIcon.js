@@ -1,4 +1,4 @@
-const IconCoffeeCup = () => {
+const CoffeeCupIcon = () => {
   return (
     <svg
       className="increasing-icon"
@@ -35,4 +35,4 @@ const IconCoffeeCup = () => {
   );
 };
 
-export default IconCoffeeCup;
+export default CoffeeCupIcon;

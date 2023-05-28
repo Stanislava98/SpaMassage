@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import IconPhoneCall from 'icons/footer-icon/IconPhoneCall';
+import PhoneCallIcon from 'icons/footer/PhoneCallIcon';
 
 const IconWithText = styled('div')({
   display: 'flex',
@@ -27,7 +27,7 @@ const PhoneNumber = () => {
         }}
         href="tel:+380934657812"
       >
-        <IconPhoneCall />
+        <PhoneCallIcon />
         <div style={{ textDecoration: 'none' }} href="tel:+380934657812">
           <Text>+380934657812</Text>
         </div>

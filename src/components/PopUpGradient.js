@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import IconCross from 'icons/IconCross';
+import CrossIcon from 'icons/CrossIcon';
 import CrossButton from './CrossButton';
 import SmallTitleDescription from './SmallTitleDescription';
 
@@ -54,7 +54,7 @@ const PopUpGradient = ({ test }) => {
     <Rectangle>
       <BgWrapper>
         <CrossButton>
-          <IconCross />
+          <CrossIcon />
         </CrossButton>
         <BlockTextInputs>
           <BlockWithText>

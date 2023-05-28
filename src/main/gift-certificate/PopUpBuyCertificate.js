@@ -1,7 +1,7 @@
 import { styled } from '@mui/material';
 import SmallTitleDescription from 'components/SmallTitleDescription';
 import CrossButton from 'components/CrossButton';
-import IconCross from 'icons/IconCross';
+import CrossIcon from 'icons/CrossIcon';
 import InputFieldNamePhone from './InputFieldNamePhone';
 
 const Rectangle = styled('div')({
@@ -75,7 +75,7 @@ const PopUpBuyCertificate = () => {
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center' }}>
                     <CrossButton>
-                      <IconCross />
+                      <CrossIcon />
                     </CrossButton>
                   </div>
                 </div>

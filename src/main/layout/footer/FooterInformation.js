@@ -3,12 +3,12 @@ import { styled } from '@mui/material';
 import { Link } from 'react-scroll';
 import DashWithSubheadings from 'components/DashWithSubHeadings';
 import PageTitle from 'components/PageTitle';
-import IconTelegram from 'icons/footer-icon/IconTelegram';
-import IconFacebook from 'icons/footer-icon/IconFacebook';
-import IconInstagram from 'icons/footer-icon/IconInstagram';
+import TelegramIcon from 'icons/footer/TelegramIcon';
+import FacebookIcon from 'icons/footer/FacebookIcon';
+import InstagramIcon from 'icons/footer/InstagramIcon';
 import MenuBar from 'components/MenuBar';
-import IconVisa from 'icons/footer-icon/IconVisa';
-import IconMasterCard from 'icons/footer-icon/IconMasterCard';
+import VisaIcon from 'icons/footer/VisaIcon';
+import MasterCardIcon from 'icons/footer/MasterCardIcon';
 import Address from 'components/Address';
 import PhoneNumber from 'components/PhoneNumber';
 
@@ -48,7 +48,7 @@ const FooterInformation = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <IconInstagram />
+            <InstagramIcon />
           </a>
           <a
             style={{ textDecoration: 'none' }}
@@ -56,10 +56,10 @@ const FooterInformation = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <IconFacebook />
+            <FacebookIcon />
           </a>
           <a href="https://t.me/Slava98890" target="_blank" rel="noreferrer">
-            <IconTelegram />
+            <TelegramIcon />
           </a>
         </div>
       </BlockTextIcons>
@@ -84,8 +84,8 @@ const FooterInformation = () => {
           </Link>
         </MenuBar>
         <div style={{ gap: '20px', display: 'flex', alignItems: 'center' }}>
-          <IconVisa />
-          <IconMasterCard />
+          <VisaIcon />
+          <MasterCardIcon />
         </div>
       </BlockTextIcons>
 

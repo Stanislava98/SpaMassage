@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import GPS from 'icons/footer-icon/GPS';
+import GpsIcon from 'icons/footer/GpsIcon';
 
 const IconWithText = styled('div')({
   display: 'flex',
@@ -29,7 +29,7 @@ const Address = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <GPS />
+        <GpsIcon />
         <div
           style={{ textDecoration: 'none' }}
           href="https://goo.gl/maps/4G1sxUjWnnKd5kj2A"

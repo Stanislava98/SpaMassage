@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Slide, styled } from '@mui/material';
 import { useDispatch } from 'react-redux';
-import CirclePhone from '../../icons/CirclePhone';
+import CirclePhoneIcon from '../../icons/CirclePhoneIcon';
 import { openDialog } from '../../store/modalSlice';
 import PopUpSucceed from './PopUpSucceed';
 
@@ -70,7 +70,7 @@ const StickyButton = () => {
   return (
     <Slide direction="up" in={isVisible}>
       <ButtonStyled onClick={handleClick}>
-        <CirclePhone />
+        <CirclePhoneIcon />
       </ButtonStyled>
     </Slide>
   );

@@ -1,4 +1,4 @@
-const IconMasterCard = () => {
+const MasterCardIcon = () => {
   return (
     <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_370_978)">
@@ -61,4 +61,4 @@ const IconMasterCard = () => {
   );
 };
 
-export default IconMasterCard;
+export default MasterCardIcon;

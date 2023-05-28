@@ -1,7 +1,7 @@
 import { styled } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import CrossButton from 'components/CrossButton';
-import IconCross from 'icons/IconCross';
+import CrossIcon from 'icons/CrossIcon';
 import StyledButtonVariation from 'components/StyledButtonVariation';
 import PopUpRectangle from 'components/PopUpRectangle';
 import { closeDialog, openDialog } from 'store/modalSlice';
@@ -53,7 +53,7 @@ const PopUpMassage = ({ details }) => {
             }}
           >
             <CrossButton>
-              <IconCross />
+              <CrossIcon />
             </CrossButton>
             <TitleOfCart>{details.title}</TitleOfCart>
           </div>

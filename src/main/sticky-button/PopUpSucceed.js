@@ -3,7 +3,7 @@ import { styled } from '@mui/material';
 import SmallTitleDescription from '../../components/SmallTitleDescription';
 import ApplicationForm from '../../components/ApplicationForm';
 import CrossButton from '../../components/CrossButton';
-import IconCross from '../../icons/IconCross';
+import CrossIcon from '../../icons/CrossIcon';
 
 const Rectangle = styled('div')({
   backgroundColor: '#1C1A1A',
@@ -58,7 +58,7 @@ const PopUpSucceed = () => {
       <Rectangle>
         <BgWrapper>
           <CrossButton>
-            <IconCross />
+            <CrossIcon />
           </CrossButton>
           <BlockTextInputs>
             <BlockWithText>

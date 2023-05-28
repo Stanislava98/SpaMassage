@@ -1,8 +1,8 @@
 import { styled } from '@mui/material';
-import IconBonusPlus from 'icons/IconBonus_Point';
-import IconMassage from 'icons/IconMassage';
-import IconCream from 'icons/IconCream';
-import IconCoffeeCup from 'icons/IconCoffeeCup';
+import IconBonusPlus from 'icons/BonusPointIcon';
+import MassageIcon from 'icons/MassageIcon';
+import CreamIcon from 'icons/CreamIcon';
+import CoffeeCupIcon from 'icons/CoffeeCupIcon';
 import PageTitle from 'components/PageTitle';
 import MarginWrapper from 'components/MarginWrapper';
 import CirclesAboutSpa from './CirclesAboutSpa';
@@ -26,17 +26,17 @@ const AboutSpa = () => {
       margin: 0,
     },
     {
-      icon: <IconMassage />,
+      icon: <MassageIcon />,
       text: 'Профессиональные массажисты',
       margin: 10,
     },
     {
-      icon: <IconCoffeeCup />,
+      icon: <CoffeeCupIcon />,
       text: 'Всем посетителям ароматный чай',
       margin: 10,
     },
     {
-      icon: <IconCream />,
+      icon: <CreamIcon />,
       text: 'Качественные масла и средства',
       margin: 10,
     },

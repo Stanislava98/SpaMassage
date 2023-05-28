@@ -1,4 +1,4 @@
-const IconPhoneCall = () => {
+const PhoneCallIcon = () => {
   return (
     <svg width="34" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_331_641)">
@@ -11,4 +11,4 @@ const IconPhoneCall = () => {
   );
 };
 
-export default IconPhoneCall;
+export default PhoneCallIcon;

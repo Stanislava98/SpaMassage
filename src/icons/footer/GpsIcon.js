@@ -1,4 +1,4 @@
-const GPS = () => {
+const GpsIcon = () => {
   return (
     <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_331_631)">
@@ -18,4 +18,4 @@ const GPS = () => {
   );
 };
 
-export default GPS;
+export default GpsIcon;

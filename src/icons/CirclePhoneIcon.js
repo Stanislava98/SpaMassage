@@ -1,4 +1,4 @@
-const CirclePhone = () => {
+const CirclePhoneIcon = () => {
   return (
     <svg width="44" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -9,4 +9,4 @@ const CirclePhone = () => {
   );
 };
 
-export default CirclePhone;
+export default CirclePhoneIcon;

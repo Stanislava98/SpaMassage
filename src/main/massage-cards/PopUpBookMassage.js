@@ -2,7 +2,7 @@ import { styled } from '@mui/material';
 import { useState } from 'react';
 import PopUpRectangle from 'components/PopUpRectangle';
 import CrossButton from 'components/CrossButton';
-import IconCross from 'icons/IconCross';
+import CrossIcon from 'icons/CrossIcon';
 import ApplicationForm from 'components/ApplicationForm';
 import Calendar from './Calendar';
 import RadioButtonCheckTime from './RadioButtonCheckTime';
@@ -63,7 +63,7 @@ const PopUpBookMassage = ({ details }) => {
             </div>
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <CrossButton>
-                <IconCross />
+                <CrossIcon />
               </CrossButton>
             </div>
           </div>

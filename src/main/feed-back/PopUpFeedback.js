@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Rating from '@mui/material/Rating';
 import SmallTitleDescription from 'components/SmallTitleDescription';
 import CrossButton from 'components/CrossButton';
-import IconCross from 'icons/IconCross';
+import CrossIcon from 'icons/CrossIcon';
 import FeedbackForm from './FeedbackForm';
 
 const StyledRating = styled(Rating)({
@@ -57,7 +57,7 @@ const PopUpFeedback = () => {
     <Rectangle>
       <BgWrapper>
         <CrossButton>
-          <IconCross />
+          <CrossIcon />
         </CrossButton>
         <div
           style={{

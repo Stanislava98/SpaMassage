@@ -1,4 +1,4 @@
-const IconVisa = () => {
+const VisaIcon = () => {
   return (
     <svg width="45" height="30" viewBox="0 0 45 30" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -13,4 +13,4 @@ const IconVisa = () => {
   );
 };
 
-export default IconVisa;
+export default VisaIcon;

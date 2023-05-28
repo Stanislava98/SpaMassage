@@ -1,4 +1,4 @@
-const IconCream = () => {
+const CreamIcon = () => {
   return (
     <svg className="increasing-icon" width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_1082_123)">
@@ -20,4 +20,4 @@ const IconCream = () => {
   );
 };
 
-export default IconCream;
+export default CreamIcon;
